@@ -1,8 +1,7 @@
 {
   "name":    "m26-js",
   "version": "0.0.1",
-  "main":    "main.js",
-  "description": "Library for running, cycling, and swimming calculations, as well as heart-rate training-zone calculations.",
+  "description": "A Node.js library for running, cycling, and swimming calculations.",
   "homepage": "https://github.com/cjoakim/m26-js",
 
   "author": {
@@ -28,7 +27,7 @@
     "grunt-contrib-jasmine": "~0.8.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt jasmine"
   },
   "keywords": [
     "m26",
