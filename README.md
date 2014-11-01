@@ -81,6 +81,24 @@ t = new M26ElapsedTime('1:5')
 t.as_hhmmss() -> '00:01:05'
 ```
 
+#### M26Speed
+
+Construct from M26Distance and M26ElapsedTime objects.
+
+```
+d = new M26Distance(26.2)
+t = new M26ElapsedTime('03:47:30')
+s = new M26Speed(d, t)
+
+s.mph()  ->     6.90989010989011  # miles per hour
+s.kph()  ->    11.1449840482344   # kilometers per hour
+s.yph()  -> 12161.4065934066      # yards per hour
+
+s.seconds_per_mile() -> 520.992366412214
+
+s.pace_per_mile()    -> '8:40.99' # hh:mm:ss per hour
+```
+
 ### Release History
 
 * 2014-11-01   v0.0.1  Initial release
