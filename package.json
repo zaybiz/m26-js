@@ -1,0 +1,27 @@
+{
+  "name": "m26-js",
+  "version": "0.0.1",
+  "description": "Library for running, cycling, and swimming calculations, as well as heart-rate training-zone calculations.",
+  "main": "index.js",
+  "dependencies": {
+    "npm-init": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "m26",
+    "running",
+    "cycling",
+    "swimming",
+    "calculations",
+    "heart",
+    "rate",
+    "zone",
+    "age",
+    "graded"
+  ],
+  "author": "Chris Joakim",
+  "license": "ISC"
+}
