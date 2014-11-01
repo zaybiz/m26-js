@@ -90,7 +90,6 @@ seconds_per_mile: 520.9923664122138
 pace_per_mile:    8:40.99
 ```
 
-
 #### Age
 
 Construct an Age from either a Number or String value.
@@ -111,10 +110,21 @@ a57.add(a20)      ->  77.3
 a57.subtract(a20) ->  36.900000000000006
 ```
 
+#### AgeCalculator
+
+Calculate and return an Age object.
+
+```
+a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01")
+a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-10-01")
+a0.val()  ->  0.08487337440109514
+a1.val()  ->  54.08350444900753
+```
+
 
 ### Release History
 
-* 2014-11-xx   v0.1.1  Under development.
+* 2014-11-xx   v0.1.1  Under development.  Added classes Age and AgeCalculator.
 * 2014-11-01   v0.1.0  Initial working version.
 * 2014-11-01   v0.0.3  alpha 3
 * 2014-11-01   v0.0.2  alpha 2

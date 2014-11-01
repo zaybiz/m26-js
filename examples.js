@@ -7,7 +7,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
  */
 
 (function() {
-  var a20, a21, a57, d, d1, d2, d3, d4, d5, m26, s, t, t1, t2;
+  var a0, a1, a20, a21, a57, d, d1, d2, d3, d4, d5, m26, s, t, t1, t2;
 
   m26 = require("./lib/m26.js");
 
@@ -246,6 +246,32 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
   console.log('a57.add(a20)      ->  ' + a57.add(a20));
 
   console.log('a57.subtract(a20) ->  ' + a57.subtract(a20));
+
+  console.log('```');
+
+  console.log('');
+
+  console.log('#### AgeCalculator');
+
+  console.log('');
+
+  console.log('Calculate and return an Age object.');
+
+  console.log('');
+
+  a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01");
+
+  a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-11-01");
+
+  console.log('```');
+
+  console.log('a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01")');
+
+  console.log('a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-10-01")');
+
+  console.log('a0.val()  ->  ' + a0.val());
+
+  console.log('a1.val()  ->  ' + a1.val());
 
   console.log('```');
 
