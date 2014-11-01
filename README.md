@@ -14,7 +14,7 @@ npm install m26-js
 
 Require m26-js in your code:
 ```
-m26 = require("./lib/m26.js")
+m26 = require(m26-js")
 ```
 
 #### Constants
@@ -31,7 +31,43 @@ m26.Constants.YARDS_PER_KILOMETER: 1091.2
 m26.Constants.SECONDS_PER_HOUR:    3600
 ```
 
+#### Distance
+
+The default unit-of-measure is miles; unit-of-measure conversion methods are available.
+```
+d1 = new m26.Distance(26.2)
+d1.uom()           -> m
+d1.as_miles()      -> 26.2
+d1.as_kilometers() -> 42.258064516222
+d1.as_yards()      -> 46112
+```
+
+Distances can be constructed from other units, and added and subtracted.
+```
+d2 = new m26.Distance(4.8)
+d3 = new m26.Distance(10.0, "k")
+d4 = d1.subtract(d3)
+d5 = d1.add(d2)
+d4.as_miles()      -> 20.00000000001364
+d5.as_miles()      -> 31
+```
+#### ElapsedTime
+
+ElapsedTime objects can be constructed from a Number of seconds, or "hh:mm:ss", "hh:mm", or "ss" String values.
+```
+t1 = new m26.ElapsedTime(3665)
+t1.as_hhmmss() -> 01:01:05
+t1.seconds()   -> 3665
+t1.hours()     -> 1.0180555555555555
+
+t2 = new m26.ElapsedTime("3:47:30")
+t2.as_hhmmss() -> 03:47:30
+t2.seconds()   -> 13650
+t2.hours()     -> 3.7916666666666665
+```
+
 #### Speed
+
 Calculate a Speed based on a given Distance and ElapsedTime.
 ```
 d = new m26.Distance(26.2)
@@ -43,7 +79,6 @@ yph: 12161.406593406595
 seconds_per_mile: 520.9923664122138
 pace_per_mile:    8:40.99
 ```
-
 
 ### Release History
 
