@@ -147,4 +147,3 @@ s2.mph()  -> 5.770789859154929
 
 * Add support for fractional seconds.
 * Add support for heart-rate training-zone calculation.
-* Add support for age-graded times.
