@@ -1,3 +1,4 @@
+# Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
 
 beforeEach ->
 
