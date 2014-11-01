@@ -98,7 +98,6 @@ Construct an Age from either a Number or String value.
 Methods val(), max_pulse(), add(), and subtract() are available.
 Max pulse is based on the widely-known "220 - age" formula.
 ```
-```
 a20 = new m26.Age(20.2)
 a21 = new m26.Age(21)
 a57 = new m26.Age("57.1")

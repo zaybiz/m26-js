@@ -217,8 +217,6 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('Max pulse is based on the widely-known "220 - age" formula.');
 
-  console.log('```');
-
   a20 = new m26.Age(20.2);
 
   a21 = new m26.Age(21);
