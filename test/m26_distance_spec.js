@@ -1,8 +1,8 @@
 (function() {
-  describe('Distance', function() {
+  describe('M26Distance', function() {
     it("should assume miles as UOM, and convert to other units", function() {
       var d;
-      d = new Distance(26.2);
+      d = new M26Distance(26.2);
       expect(d.uom()).toBe(M26.UOM_MILES);
       expect(d.as_miles()).isWithin(0.0000000001, 26.2);
       expect(d.as_kilometers()).isWithin(0.0000000001, 42.258064516222);
@@ -10,7 +10,7 @@
     });
     it("should calculate a 10K, and convert to other units", function() {
       var d;
-      d = new Distance(10.0, 'k');
+      d = new M26Distance(10.0, 'k');
       expect(d.uom()).toBe(M26.UOM_KILOMETERS);
       expect(d.as_miles()).isWithin(0.0000000001, 6.2);
       expect(d.as_kilometers()).isWithin(0.0000000001, 10.0);
@@ -18,7 +18,7 @@
     });
     it("should calculate an 1800y, and convert to other units", function() {
       var d;
-      d = new Distance(1800.0, 'y');
+      d = new M26Distance(1800.0, 'y');
       expect(d.uom()).toBe(M26.UOM_YARDS);
       expect(d.as_miles()).isWithin(0.0000000001, 1.0227272727272727);
       expect(d.as_kilometers()).isWithin(0.0000000001, 1.6495601173056818);
@@ -26,8 +26,8 @@
     });
     return it("should subtract", function() {
       var d1, d2, d3;
-      d1 = new Distance(26.2);
-      d2 = new Distance(10.0, 'k');
+      d1 = new M26Distance(26.2);
+      d2 = new M26Distance(10.0, 'k');
       d3 = d1.subtract(d2);
       expect(d3.uom()).toBe(M26.UOM_MILES);
       return expect(d3.as_miles()).isWithin(0.0000000001, 20.0);

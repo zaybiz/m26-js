@@ -2,7 +2,7 @@
 
 root = exports ? this
 
-class Speed
+class M26Speed
 
   constructor: (d, et) ->
     [@d, @et] = [d, et]
@@ -41,12 +41,12 @@ class Speed
       d2 = another_distance.as_miles()
       # t2 = t1.to_f * ((d2.to_f / d1.to_f) ** pow)   Math.pow(3,3)
       t2 = t1 * Math.pow((d2 / d1), 1.06)
-      et = new ElapsedTime(t2);
+      et = new M26ElapsedTime(t2);
       return et.as_hhmmss()
     else
       secs = @seconds_per_mile() * another_distance.as_miles()
-      et = new ElapsedTime(secs);
+      et = new M26ElapsedTime(secs);
       return et.as_hhmmss()
     end
 
-root.Speed = Speed
+root.M26Speed = M26Speed

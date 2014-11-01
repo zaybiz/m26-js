@@ -2,7 +2,7 @@
 
 root = exports ? this
 
-class ElapsedTime
+class M26ElapsedTime
 
   constructor: (val='00:00:00') ->
     [@hh, @mm, @ss, @secs] = [0, 0, 0, 0]
@@ -55,4 +55,4 @@ class ElapsedTime
     else
       '' + n
 
-root.ElapsedTime = ElapsedTime
+root.M26ElapsedTime = M26ElapsedTime

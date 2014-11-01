@@ -2,7 +2,7 @@
 
 root = exports ? this
 
-class Distance
+class M26Distance
 
   constructor: (d=0, uom=M26.UOM_MILES) ->
     @d = parseFloat(d)
@@ -46,6 +46,6 @@ class Distance
     if another_instance
       d1 = @as_miles()
       d2 = another_instance.as_miles()
-      new Distance(d1 - d2)
+      new M26Distance(d1 - d2)
 
-root.Distance = Distance
+root.M26Distance = M26Distance
