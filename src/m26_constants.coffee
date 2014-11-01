@@ -4,7 +4,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
 root = exports ? this
 
-class M26
+class Constants
 
   @UOM_MILES:      'm'
   @UOM_KILOMETERS: 'k'
@@ -16,4 +16,4 @@ class M26
   @YARDS_PER_KILOMETER = 1091.2
   @SECONDS_PER_HOUR    = 3600.0
 
-root.M26 = M26
+root.Constants = Constants

@@ -4,100 +4,47 @@
 
 A Node.js library for running, cycling, and swimming calculations.
 
-### Getting Started
+### Examples
 
+#### Setup
+Add m26-js to your project or package.json file:
 ```
 npm install m26-js
 ```
 
-### Examples
-
-#### M26Distance
-
-Creation and unit-of-measure conversion:
-
+Require m26-js in your code:
 ```
-d = new M26Distance(26.2)  # defaults to miles
-d.uom()           -> M26.UOM_MILES
-d.as_miles()      -> 26.2
-d.as_kilometers() -> 42.258064516222
-d.as_yards()      -> 46112.0
-
-d = new M26Distance(10.0, 'k')
-d.uom()      -> M26.UOM_KILOMETERS
-d.as_miles() -> 6.2)
-
-d = new M26Distance(1800.0, 'y')
-d.uom()           -> M26.UOM_YARDS
-d.as_kilometers() -> 1.6495601173056818
+m26 = require("./lib/m26.js")
 ```
 
-Addition and subtraction:
-
+#### Constants
+m26-js defines the following:
 ```
-d1 = new M26Distance(26.2)
-d2 = new M26Distance(4.8)
-d3 = d1.add(d2)
-d3.as_miles() -> 31.0
-
-d1 = new M26Distance(26.2)
-d2 = new M26Distance(10.0, 'k')
-d3 = d1.subtract(d2)
-d3.as_miles() -> 20.0
-```
-
-#### M26ElapsedTime
-
-Creation, formatting, and time calculation functions.
-
-Construct with a number of seconds:
-
-```
-t = new M26ElapsedTime(3665)
-t.as_hhmmss() -> '01:01:05'
-t.seconds()   ->  3665.0
-t.hours()     ->  1.0180555555555555
+m26.Constants.UOM_MILES:           m
+m26.Constants.UOM_KILOMETERS:      k
+m26.Constants.UOM_YARDS:           y
+m26.Constants.UNITS_OF_MEASURE:    ["m","k","y"]
+m26.Constants.KILOMETERS_PER_MILE: 1.61290322581
+m26.Constants.YARDS_PER_MILE:      1760
+m26.Constants.MILES_PER_KILOMETER: 0.62
+m26.Constants.YARDS_PER_KILOMETER: 1091.2
+m26.Constants.SECONDS_PER_HOUR:    3600
 ```
 
-Construct from a hh:mm:ss String
-
+#### Speed
+Calculate a Speed based on a given Distance and ElapsedTime.
 ```
-t = new M26ElapsedTime('01:01:05')
-t.as_hhmmss() -> '01:01:05'
-t.seconds()   ->  3665.0
-```
-
-Construct from a mm:ss String
-
-```
-t = new M26ElapsedTime('1:5')
-t.as_hhmmss() -> '00:01:05'
+d = new m26.Distance(26.2)
+t = new m26.ElapsedTime("03:47:30")
+s = new m26.Speed(d, t)
+mph: 6.90989010989011
+kph: 11.144984048234374
+yph: 12161.406593406595
+seconds_per_mile: 520.9923664122138
+pace_per_mile:    8:40.99
 ```
 
-Construct from a mm:ss String
 
-```
-t = new M26ElapsedTime('1:5')
-t.as_hhmmss() -> '00:01:05'
-```
-
-#### M26Speed
-
-Construct from M26Distance and M26ElapsedTime objects.
-
-```
-d = new M26Distance(26.2)
-t = new M26ElapsedTime('03:47:30')
-s = new M26Speed(d, t)
-
-s.mph()  ->     6.90989010989011  # miles per hour
-s.kph()  ->    11.1449840482344   # kilometers per hour
-s.yph()  -> 12161.4065934066      # yards per hour
-
-s.seconds_per_mile() -> 520.992366412214
-
-s.pace_per_mile()    -> '8:40.99' # hh:mm:ss per hour
-```
 
 ### Release History
 

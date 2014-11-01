@@ -2,7 +2,7 @@
 
 root = exports ? this
 
-class M26ElapsedTime
+class ElapsedTime
 
   constructor: (val='00:00:00') ->
     [@hh, @mm, @ss, @secs] = [0, 0, 0, 0]
@@ -14,8 +14,8 @@ class M26ElapsedTime
   initialize_from_number: (n) ->
     try
       @secs = new Number(n)
-      @hh = Math.floor(@secs / M26.SECONDS_PER_HOUR)
-      rem = @secs - (@hh * M26.SECONDS_PER_HOUR)
+      @hh = Math.floor(@secs / Constants.SECONDS_PER_HOUR)
+      rem = @secs - (@hh * Constants.SECONDS_PER_HOUR)
       @mm = Math.floor(rem / 60.0)
       @ss = rem - (@mm * 60.0)
     catch error
@@ -43,7 +43,7 @@ class M26ElapsedTime
     @secs
 
   hours: ->
-    @secs / M26.SECONDS_PER_HOUR
+    @secs / Constants.SECONDS_PER_HOUR
 
   as_hhmmss: ->
     @ss = parseInt(@ss)
@@ -55,4 +55,4 @@ class M26ElapsedTime
     else
       '' + n
 
-root.M26ElapsedTime = M26ElapsedTime
+root.ElapsedTime = ElapsedTime
