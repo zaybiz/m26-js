@@ -124,13 +124,14 @@ s.seconds_per_mile() -> 572.5190839694657
 s.pace_per_mile()    -> 9:32.51
 
 s.projected_time(d2)           -> 04:55:48
-s.projected_time(d2, "simple") -> 04:55:48
-s.projected_time(d2, "riegel") -> 04:58:48
+s.projected_time(d2, "simple") -> 04:55:48  # simple linear formula
+s.projected_time(d2, "riegel") -> 04:58:48  # exponential formula
 ```
+
 
 ### Release History
 
-* 2014-11-xx   v0.1.1  Under development.  Added classes Age and AgeCalculator.
+* 2014-11-xx   v0.1.1  Added Speed.projected_time(). Added classes Age and AgeCalculator.
 * 2014-11-01   v0.1.0  Initial working version.
 * 2014-11-01   v0.0.3  alpha 3
 * 2014-11-01   v0.0.2  alpha 2

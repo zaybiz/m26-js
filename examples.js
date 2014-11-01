@@ -283,9 +283,9 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('s.projected_time(d2)           -> ' + s.projected_time(d2));
 
-  console.log('s.projected_time(d2, "simple") -> ' + s.projected_time(d2, "simple"));
+  console.log('s.projected_time(d2, "simple") -> ' + s.projected_time(d2, "simple") + '  # simple linear formula');
 
-  console.log('s.projected_time(d2, "riegel") -> ' + s.projected_time(d2, "riegel"));
+  console.log('s.projected_time(d2, "riegel") -> ' + s.projected_time(d2, "riegel") + '  # exponential formula');
 
   console.log('```');
 

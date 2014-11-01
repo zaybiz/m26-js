@@ -1,6 +1,6 @@
 {
   "name":    "m26-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Node.js library for running, cycling, and swimming calculations.",
   "homepage": "https://github.com/cjoakim/m26-js",
   "main": "lib/m26.js",
