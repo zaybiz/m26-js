@@ -82,6 +82,7 @@ pace_per_mile:    8:40.99
 
 ### Release History
 
+* 2014-11-01   v0.1.0  Initial working version.
 * 2014-11-01   v0.0.3  alpha 3
 * 2014-11-01   v0.0.2  alpha 2
 * 2014-11-01   v0.0.1  alpha 1
