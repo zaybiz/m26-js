@@ -1,12 +1,32 @@
 {
-  "name": "m26-js",
+  "name":    "m26-js",
   "version": "0.0.1",
+  "main":    "main.js",
   "description": "Library for running, cycling, and swimming calculations, as well as heart-rate training-zone calculations.",
-  "main": "index.js",
+  "homepage": "https://github.com/cjoakim/m26-js",
+
+  "author": {
+    "name": "Chris Joakim, JoakimSoftware LLC",
+    "url":  "http://www.chrisjoakim.com"
+  },
+  "licenses": [
+    {
+      "type": "ISC",
+      "url":  "https://github.com/cjoakim/m26-js/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url":  "https://github.com/cjoakim/m26-js"
+  },
   "dependencies": {
     "npm-init": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-coffee": "~0.12.0",
+    "grunt-contrib-jasmine": "~0.8.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +41,5 @@
     "zone",
     "age",
     "graded"
-  ],
-  "author": "Chris Joakim",
-  "license": "ISC"
+  ]
 }
