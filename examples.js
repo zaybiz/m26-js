@@ -7,7 +7,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
  */
 
 (function() {
-  var d, d1, d2, d3, d4, d5, m26, s, t, t1, t2;
+  var a20, a21, a57, d, d1, d2, d3, d4, d5, m26, s, t, t1, t2;
 
   m26 = require("./lib/m26.js");
 
@@ -18,6 +18,8 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
   console.log('');
 
   console.log('#### Setup');
+
+  console.log('');
 
   console.log('Add m26-js to your project or package.json file:');
 
@@ -41,9 +43,13 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('#### Constants');
 
+  console.log('');
+
   console.log('m26-js defines the following:');
 
   console.log('```');
+
+  console.log('m26.Constants.VERSION:             ' + m26.Constants.VERSION);
 
   console.log('m26.Constants.UOM_MILES:           ' + m26.Constants.UOM_MILES);
 
@@ -69,7 +75,13 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('#### Distance');
 
-  console.log('The default unit-of-measure is miles; unit-of-measure conversion methods are available.');
+  console.log('');
+
+  console.log('The default unit-of-measure is miles ("m"), but "k" or "y" may also be specified.');
+
+  console.log('');
+
+  console.log('Methods uom(), as_miles(), as_kilometers(), as_yards(), add(), and subtract() are available.');
 
   console.log('```');
 
@@ -117,7 +129,13 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('#### ElapsedTime');
 
+  console.log('');
+
   console.log('ElapsedTime objects can be constructed from a Number of seconds, or "hh:mm:ss", "hh:mm", or "ss" String values.');
+
+  console.log('');
+
+  console.log('Methods as_hhmmss(), seconds(), and hours() are available.');
 
   console.log('```');
 
@@ -149,7 +167,13 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('#### Speed');
 
+  console.log('');
+
   console.log('Calculate a Speed based on a given Distance and ElapsedTime.');
+
+  console.log('');
+
+  console.log('Methods mph(), kph(), yph(), seconds_per_mile(), and pace_per_mile() are available.');
 
   console.log('```');
 
@@ -178,6 +202,54 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
   console.log('```');
 
   console.log('');
+
+  console.log('');
+
+  console.log('#### Age');
+
+  console.log('');
+
+  console.log('Construct an Age from either a Number or String value.');
+
+  console.log('');
+
+  console.log('Methods val(), max_pulse(), add(), and subtract() are available.');
+
+  console.log('Max pulse is based on the widely-known "220 - age" formula.');
+
+  console.log('```');
+
+  a20 = new m26.Age(20.2);
+
+  a21 = new m26.Age(21);
+
+  a57 = new m26.Age("57.1");
+
+  console.log('```');
+
+  console.log('a20 = new m26.Age(20.2)');
+
+  console.log('a21 = new m26.Age(21)');
+
+  console.log('a57 = new m26.Age("57.1")');
+
+  console.log('a20.val()  ->  ' + a20.val());
+
+  console.log('a21.val()  ->  ' + a21.val());
+
+  console.log('a57.val()  ->  ' + a57.val());
+
+  console.log('a20.max_pulse()   ->  ' + a20.max_pulse());
+
+  console.log('a21.max_pulse()   ->  ' + a21.max_pulse());
+
+  console.log('a57.max_pulse()   ->  ' + a57.max_pulse());
+
+  console.log('a57.add(a20)      ->  ' + a57.add(a20));
+
+  console.log('a57.subtract(a20) ->  ' + a57.subtract(a20));
+
+  console.log('```');
 
   console.log('');
 
