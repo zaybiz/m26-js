@@ -135,7 +135,7 @@ s2.mph()  -> 5.770789859154929
 
 ### Release History
 
-* 2014-11-01   v0.1.2  Adding Speed.age_graded()
+* 2014-11-01   v0.1.2  Added Speed.age_graded()
 * 2014-11-01   v0.1.1  Added Speed.projected_time(), Age, AgeCalculator.
 * 2014-11-01   v0.1.0  Initial working version.
 * 2014-11-01   v0.0.3  alpha 3
