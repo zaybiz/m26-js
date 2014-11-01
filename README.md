@@ -88,6 +88,6 @@ t.as_hhmmss() -> '00:01:05'
 
 ### Future Enhancements
 
-# Add support for fractional seconds.
-# Add support for heart-rate training-zone calculation.
-# Add support for age-graded times.
+* Add support for fractional seconds.
+* Add support for heart-rate training-zone calculation.
+* Add support for age-graded times.
