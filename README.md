@@ -45,11 +45,11 @@ pace_per_mile:    8:40.99
 ```
 
 
-
 ### Release History
 
-* 2014-11-01   v0.0.2  Initial release, updated main entry in package.json
-* 2014-11-01   v0.0.1  Initial release
+* 2014-11-01   v0.0.3  alpha 3
+* 2014-11-01   v0.0.2  alpha 2
+* 2014-11-01   v0.0.1  alpha 1
 
 
 ### Future Enhancements

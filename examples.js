@@ -7,7 +7,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
  */
 
 (function() {
-  var d, m26, s, t;
+  var d, d1, d2, d3, d4, d5, m26, s, t, t1, t2;
 
   m26 = require("./lib/m26.js");
 
@@ -33,7 +33,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('```');
 
-  console.log('m26 = require("./lib/m26.js")');
+  console.log('m26 = require(m26-js")');
 
   console.log('```');
 
@@ -62,6 +62,86 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
   console.log('m26.Constants.YARDS_PER_KILOMETER: ' + m26.Constants.YARDS_PER_KILOMETER);
 
   console.log('m26.Constants.SECONDS_PER_HOUR:    ' + m26.Constants.SECONDS_PER_HOUR);
+
+  console.log('```');
+
+  console.log('');
+
+  console.log('#### Distance');
+
+  console.log('The default unit-of-measure is miles; unit-of-measure conversion methods are available.');
+
+  console.log('```');
+
+  d1 = new m26.Distance(26.2);
+
+  console.log('d1 = new m26.Distance(26.2)');
+
+  console.log('d1.uom()           -> ' + d1.uom());
+
+  console.log('d1.as_miles()      -> ' + d1.as_miles());
+
+  console.log('d1.as_kilometers() -> ' + d1.as_kilometers());
+
+  console.log('d1.as_yards()      -> ' + d1.as_yards());
+
+  console.log('```');
+
+  console.log('');
+
+  console.log('Distances can be constructed from other units, and added and subtracted.');
+
+  d2 = new m26.Distance(4.8);
+
+  d3 = new m26.Distance(10.0, "k");
+
+  d4 = d1.subtract(d3);
+
+  d5 = d1.add(d2);
+
+  console.log('```');
+
+  console.log('d2 = new m26.Distance(4.8)');
+
+  console.log('d3 = new m26.Distance(10.0, "k")');
+
+  console.log('d4 = d1.subtract(d3)');
+
+  console.log('d5 = d1.add(d2)');
+
+  console.log('d4.as_miles()      -> ' + d4.as_miles());
+
+  console.log('d5.as_miles()      -> ' + d5.as_miles());
+
+  console.log('```');
+
+  console.log('#### ElapsedTime');
+
+  console.log('ElapsedTime objects can be constructed from a Number of seconds, or "hh:mm:ss", "hh:mm", or "ss" String values.');
+
+  console.log('```');
+
+  t1 = new m26.ElapsedTime(3665);
+
+  t2 = new m26.ElapsedTime("3:47:30");
+
+  console.log('t1 = new m26.ElapsedTime(3665)');
+
+  console.log('t1.as_hhmmss() -> ' + t1.as_hhmmss());
+
+  console.log('t1.seconds()   -> ' + t1.seconds());
+
+  console.log('t1.hours()     -> ' + t1.hours());
+
+  console.log('');
+
+  console.log('t2 = new m26.ElapsedTime("3:47:30")');
+
+  console.log('t2.as_hhmmss() -> ' + t2.as_hhmmss());
+
+  console.log('t2.seconds()   -> ' + t2.seconds());
+
+  console.log('t2.hours()     -> ' + t2.hours());
 
   console.log('```');
 
