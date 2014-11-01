@@ -1,37 +1,5 @@
 # Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
 
-beforeEach ->
-
-  # See https://www.packtpub.com/sites/default/files/downloads/7204OS_The_Future_Jasmine_2_0.pdf
-
-  jasmine.Expectation.addMatchers({
-    isWithin: (tolerance, expected) ->
-      {
-        compare: (actual, tolerance, expected) ->
-          @pass = true
-          @msg  = 'Ok'
-          min   = expected - tolerance
-          max   = expected + tolerance
-          @data = { 'actual' : actual , 'expected' : expected, 'tolerance' : tolerance, 'min' : min, 'max' : max }
-
-          if false
-            console.log('data: ' + JSON.stringify(@data))
-
-          if actual > max
-            @pass = false
-            @msg  = 'value is too large; expected ' + expected + ' but got ' + actual
-
-          if actual < min
-            @pass = false
-            @msg  = 'value is too small; expected ' + expected + ' but got ' + actual
-
-          unless pass
-            console.log('failed: ' + JSON.stringify(@data))
-
-          { pass: @pass, message: @msg }
-      }
-  })
-
 describe 'Speed', ->
 
   it 'calculates a 2-mile walk, with round numbers', ->
@@ -53,3 +21,4 @@ describe 'Speed', ->
     expect(s.yph()).isWithin(0.000001, 12161.4065934066)
     expect(s.seconds_per_mile()).isWithin(0.000001, 520.992366412214)
     expect(s.pace_per_mile()).toBe('8:40.99')
+
