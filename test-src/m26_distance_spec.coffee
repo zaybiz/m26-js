@@ -2,9 +2,6 @@
 
 describe 'Distance', ->
 
-  beforeEach ->
-    x = 0
-
   it "should assume miles as UOM, and convert to other units", ->
     d = new Distance(26.2)
     expect(d.uom()).toBe(M26.UOM_MILES)

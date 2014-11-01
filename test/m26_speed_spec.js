@@ -11,7 +11,7 @@
       expect(s.seconds_per_mile()).isWithin(0.000001, 900);
       return expect(s.pace_per_mile()).toBe('15:00');
     });
-    it('calculates a marathon, with fractional numbers', function() {
+    return it('calculates a marathon, with fractional numbers', function() {
       var d, s, t;
       d = new Distance(26.2);
       t = new ElapsedTime('03:47:30');
@@ -21,9 +21,6 @@
       expect(s.yph()).isWithin(0.000001, 12161.4065934066);
       expect(s.seconds_per_mile()).isWithin(0.000001, 520.992366412214);
       return expect(s.pace_per_mile()).toBe('8:40.99');
-    });
-    return it('11 is 11', function() {
-      return expect(12).is11();
     });
   });
 
