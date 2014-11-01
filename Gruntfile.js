@@ -7,10 +7,10 @@ module.exports = function (grunt) {
         files: {
           'lib/m26.js': ['src/*.coffee'],
 
-          'spec/m26_base_spec.js':          ['spec/m26_base_spec.coffee'],
-          'spec/m26_distance_spec.js':      ['spec/m26_distance_spec.coffee'],
-          'spec/m26_elapsed_time_spec.js':  ['spec/m26_elapsed_time_spec.coffee'],
-          'spec/m26_speed_spec.js':         ['spec/m26_speed_spec.coffee']
+          'test/m26_base_spec.js':          ['test-src/m26_base_spec.coffee'],
+          'test/m26_distance_spec.js':      ['test-src/m26_distance_spec.coffee'],
+          'test/m26_elapsed_time_spec.js':  ['test-src/m26_elapsed_time_spec.coffee'],
+          'test/m26_speed_spec.js':         ['test-src/m26_speed_spec.coffee']
         }
       }
     },
@@ -18,7 +18,7 @@ module.exports = function (grunt) {
     jasmine : {
       src : 'lib/m26.js',
       options : {
-        specs : 'spec/*.js'
+        specs : 'test/*.js'
       }
     }
 
