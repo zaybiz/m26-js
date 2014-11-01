@@ -7,7 +7,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
  */
 
 (function() {
-  var a0, a1, a20, a21, a57, d, d1, d2, d3, d4, d5, m26, s, t, t1, t2;
+  var a0, a1, a2, a20, a21, a57, d, d1, d2, d3, d4, d5, m26, s, s2, t, t1, t2;
 
   m26 = require("./lib/m26.js");
 
@@ -286,6 +286,24 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
   console.log('s.projected_time(d2, "simple") -> ' + s.projected_time(d2, "simple") + '  # simple linear formula');
 
   console.log('s.projected_time(d2, "riegel") -> ' + s.projected_time(d2, "riegel") + '  # exponential formula');
+
+  console.log('');
+
+  a1 = new m26.Age(42.5);
+
+  a2 = new m26.Age(57.1);
+
+  s2 = s.age_graded(a1, a2);
+
+  console.log('a1 = new m26.Age(42.5)');
+
+  console.log('a2 = new m26.Age(57.1)');
+
+  console.log('s2 = s.age_graded(a1, a2)');
+
+  console.log('s.mph()   -> ' + s.mph());
+
+  console.log('s2.mph()  -> ' + s2.mph());
 
   console.log('```');
 

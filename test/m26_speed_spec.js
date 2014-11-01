@@ -33,7 +33,7 @@
       hhmmss = s.projected_time(d2, 'simple');
       return expect(hhmmss).toBe('03:00:00');
     });
-    return it('projected_time using the exponential riegel formula', function() {
+    it('projected_time using the exponential riegel formula', function() {
       var d1, d2, hhmmss, s, t;
       d1 = new Distance(10.0);
       t = new ElapsedTime('1:30:00');
@@ -43,6 +43,20 @@
       d2 = new Distance(20.0);
       hhmmss = s.projected_time(d2, 'riegel');
       return expect(hhmmss).toBe('03:07:38');
+    });
+    return it('should calculate an age_graded Speed', function() {
+      var a1, a2, a3, d, s1, s2, s3, t;
+      d = new Distance(26.2);
+      t = new ElapsedTime('3:47:30');
+      s1 = new Speed(d, t);
+      a1 = new Age(42.5);
+      a2 = new Age(43.5);
+      a3 = new Age(57.1);
+      expect(s1.mph()).isWithin(0.000001, 6.90989010989011);
+      s2 = s1.age_graded(a1, a2);
+      s3 = s1.age_graded(a1, a3);
+      expect(s2.mph()).isWithin(0.000001, 6.870961151524531);
+      return expect(s3.mph()).isWithin(0.000001, 6.341527317752669);
     });
   });
 

@@ -41,3 +41,16 @@ describe 'Speed', ->
     d2 = new Distance(20.0)
     hhmmss = s.projected_time(d2, 'riegel')
     expect(hhmmss).toBe('03:07:38')
+
+  it 'should calculate an age_graded Speed', ->
+    d  = new Distance(26.2)
+    t  = new ElapsedTime('3:47:30')
+    s1 = new Speed(d, t)
+    a1 = new Age(42.5)
+    a2 = new Age(43.5)
+    a3 = new Age(57.1)
+    expect(s1.mph()).isWithin(0.000001, 6.90989010989011)
+    s2 = s1.age_graded(a1, a2)
+    s3 = s1.age_graded(a1, a3)
+    expect(s2.mph()).isWithin(0.000001, 6.870961151524531)
+    expect(s3.mph()).isWithin(0.000001, 6.341527317752669)

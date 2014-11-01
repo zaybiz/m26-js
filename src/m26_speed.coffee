@@ -48,14 +48,11 @@ class Speed
       et = new ElapsedTime(secs);
       return et.as_hhmmss()
 
-    # def age_graded(dob, event_yyyy_mm_dd, base_yyyy_mm_dd)
-    #   @evt_age   = M26::Age.new(dob, event_yyyy_mm_dd)
-    #   @base_age  = M26::Age.new(dob, base_yyyy_mm_dd)
-    #   @ag_factor = (base_age.max_pulse / evt_age.max_pulse).to_f
-    #   @ag_secs   = (elapsed_time.secs.to_f) * ag_factor
-    #   @ag_time   = M26::ElapsedTime.new(ag_secs)
-    #   @ag_speed  = M26::Speed.new(distance, ag_time)
-    #   @ag_speed
-    # end
+  age_graded: (event_age, graded_age) ->
+    ag_factor = event_age.max_pulse() / graded_age.max_pulse()
+    event_secs = this.et.seconds()
+    graded_secs = event_secs * ag_factor
+    graded_et   = new ElapsedTime(graded_secs)
+    new Speed(this.d, graded_et)
 
 root.Speed = Speed

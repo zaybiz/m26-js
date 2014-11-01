@@ -2,8 +2,7 @@
 
 ### Purpose
 
-A Node.js library for running, cycling, and swimming calculations.
-
+A Node.js library for running, cycling, swimming and age calculations, plus age-grading.
 
 ### Examples
 
@@ -23,7 +22,7 @@ m26 = require(m26-js")
 
 m26-js defines the following:
 ```
-m26.Constants.VERSION:             0.1.1
+m26.Constants.VERSION:             0.1.2
 m26.Constants.UOM_MILES:           m
 m26.Constants.UOM_KILOMETERS:      k
 m26.Constants.UOM_YARDS:           y
@@ -126,12 +125,18 @@ s.pace_per_mile()    -> 9:32.51
 s.projected_time(d2)           -> 04:55:48
 s.projected_time(d2, "simple") -> 04:55:48  # simple linear formula
 s.projected_time(d2, "riegel") -> 04:58:48  # exponential formula
-```
 
+a1 = new m26.Age(42.5)
+a2 = new m26.Age(57.1)
+s2 = s.age_graded(a1, a2)
+s.mph()   -> 6.287999999999999
+s2.mph()  -> 5.770789859154929
+```
 
 ### Release History
 
-* 2014-11-xx   v0.1.1  Added Speed.projected_time(). Added classes Age and AgeCalculator.
+* 2014-11-01   v0.1.2  Adding Speed.age_graded()
+* 2014-11-01   v0.1.1  Added Speed.projected_time(), Age, AgeCalculator.
 * 2014-11-01   v0.1.0  Initial working version.
 * 2014-11-01   v0.0.3  alpha 3
 * 2014-11-01   v0.0.2  alpha 2
