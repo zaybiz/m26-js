@@ -42,6 +42,12 @@ class M26Distance
       when M26.UOM_YARDS then @d
       else 0
 
+  add: (another_instance) ->
+    if another_instance
+      d1 = @as_miles()
+      d2 = another_instance.as_miles()
+      new M26Distance(d1 + d2)
+
   subtract: (another_instance) ->
     if another_instance
       d1 = @as_miles()
