@@ -35,6 +35,37 @@ m26.Constants.YARDS_PER_KILOMETER: 1091.2
 m26.Constants.SECONDS_PER_HOUR:    3600
 ```
 
+#### Age
+
+Construct an Age from either a Number or String value.
+
+Methods val(), max_pulse(), add(), and subtract() are available.
+Max pulse is based on the widely-known "220 - age" formula.
+```
+a20 = new m26.Age(20.2)
+a21 = new m26.Age(21)
+a57 = new m26.Age("57.1")
+a20.val()  ->  20.2
+a21.val()  ->  21
+a57.val()  ->  57.1
+a20.max_pulse()   ->  199.8
+a21.max_pulse()   ->  199
+a57.max_pulse()   ->  162.9
+a57.add(a20)      ->  77.3
+a57.subtract(a20) ->  36.900000000000006
+```
+
+#### AgeCalculator
+
+Calculate and return an Age object, given a birth date, and optional as-of date.
+
+```
+a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01")
+a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-10-01")
+a0.val()  ->  0.08487337440109514
+a1.val()  ->  54.08350444900753
+```
+
 #### Distance
 
 The default unit-of-measure is miles ("m"), but "k" or "y" may also be specified.
@@ -78,49 +109,24 @@ t2.hours()     -> 3.7916666666666665
 
 Calculate a Speed based on a given Distance and ElapsedTime.
 
-Methods mph(), kph(), yph(), seconds_per_mile(), and pace_per_mile() are available.
+Methods mph(), kph(), yph(), seconds_per_mile(), pace_per_mile() and projected_time() are available.
 ```
-d = new m26.Distance(26.2)
-t = new m26.ElapsedTime("03:47:30")
-s = new m26.Speed(d, t)
-mph: 6.90989010989011
-kph: 11.144984048234374
-yph: 12161.406593406595
-seconds_per_mile: 520.9923664122138
-pace_per_mile:    8:40.99
+d  = new m26.Distance(26.2)
+d2 = new m26.Distance(50.0, "k")
+t  = new m26.ElapsedTime("04:10:00")
+s  = new m26.Speed(d, t)
+
+s.mph()  -> 6.287999999999999
+s.kph()  -> 10.14193548389328
+s.yph()  -> 11066.88
+
+s.seconds_per_mile() -> 572.5190839694657
+s.pace_per_mile()    -> 9:32.51
+
+s.projected_time(d2)           -> 04:55:48
+s.projected_time(d2, "simple") -> 04:55:48
+s.projected_time(d2, "riegel") -> 04:58:48
 ```
-
-#### Age
-
-Construct an Age from either a Number or String value.
-
-Methods val(), max_pulse(), add(), and subtract() are available.
-Max pulse is based on the widely-known "220 - age" formula.
-```
-a20 = new m26.Age(20.2)
-a21 = new m26.Age(21)
-a57 = new m26.Age("57.1")
-a20.val()  ->  20.2
-a21.val()  ->  21
-a57.val()  ->  57.1
-a20.max_pulse()   ->  199.8
-a21.max_pulse()   ->  199
-a57.max_pulse()   ->  162.9
-a57.add(a20)      ->  77.3
-a57.subtract(a20) ->  36.900000000000006
-```
-
-#### AgeCalculator
-
-Calculate and return an Age object.
-
-```
-a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01")
-a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-10-01")
-a0.val()  ->  0.08487337440109514
-a1.val()  ->  54.08350444900753
-```
-
 
 ### Release History
 

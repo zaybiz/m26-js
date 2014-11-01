@@ -73,6 +73,78 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('');
 
+  console.log('#### Age');
+
+  console.log('');
+
+  console.log('Construct an Age from either a Number or String value.');
+
+  console.log('');
+
+  console.log('Methods val(), max_pulse(), add(), and subtract() are available.');
+
+  console.log('Max pulse is based on the widely-known "220 - age" formula.');
+
+  a20 = new m26.Age(20.2);
+
+  a21 = new m26.Age(21);
+
+  a57 = new m26.Age("57.1");
+
+  console.log('```');
+
+  console.log('a20 = new m26.Age(20.2)');
+
+  console.log('a21 = new m26.Age(21)');
+
+  console.log('a57 = new m26.Age("57.1")');
+
+  console.log('a20.val()  ->  ' + a20.val());
+
+  console.log('a21.val()  ->  ' + a21.val());
+
+  console.log('a57.val()  ->  ' + a57.val());
+
+  console.log('a20.max_pulse()   ->  ' + a20.max_pulse());
+
+  console.log('a21.max_pulse()   ->  ' + a21.max_pulse());
+
+  console.log('a57.max_pulse()   ->  ' + a57.max_pulse());
+
+  console.log('a57.add(a20)      ->  ' + a57.add(a20));
+
+  console.log('a57.subtract(a20) ->  ' + a57.subtract(a20));
+
+  console.log('```');
+
+  console.log('');
+
+  console.log('#### AgeCalculator');
+
+  console.log('');
+
+  console.log('Calculate and return an Age object, given a birth date, and optional as-of date.');
+
+  console.log('');
+
+  a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01");
+
+  a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-11-01");
+
+  console.log('```');
+
+  console.log('a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01")');
+
+  console.log('a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-10-01")');
+
+  console.log('a0.val()  ->  ' + a0.val());
+
+  console.log('a1.val()  ->  ' + a1.val());
+
+  console.log('```');
+
+  console.log('');
+
   console.log('#### Distance');
 
   console.log('');
@@ -173,107 +245,51 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('');
 
-  console.log('Methods mph(), kph(), yph(), seconds_per_mile(), and pace_per_mile() are available.');
+  console.log('Methods mph(), kph(), yph(), seconds_per_mile(), pace_per_mile() and projected_time() are available.');
 
   console.log('```');
 
   d = new m26.Distance(26.2);
 
-  t = new m26.ElapsedTime('03:47:30');
+  t = new m26.ElapsedTime("04:10:00");
 
   s = new m26.Speed(d, t);
 
-  console.log('d = new m26.Distance(26.2)');
+  d2 = new m26.Distance(50.0, "k");
 
-  console.log('t = new m26.ElapsedTime("03:47:30")');
+  console.log('d  = new m26.Distance(26.2)');
 
-  console.log('s = new m26.Speed(d, t)');
+  console.log('d2 = new m26.Distance(50.0, "k")');
 
-  console.log('mph: ' + s.mph());
+  console.log('t  = new m26.ElapsedTime("04:10:00")');
 
-  console.log('kph: ' + s.kph());
+  console.log('s  = new m26.Speed(d, t)');
 
-  console.log('yph: ' + s.yph());
+  console.log('');
 
-  console.log('seconds_per_mile: ' + s.seconds_per_mile());
+  console.log('s.mph()  -> ' + s.mph());
 
-  console.log('pace_per_mile:    ' + s.pace_per_mile());
+  console.log('s.kph()  -> ' + s.kph());
+
+  console.log('s.yph()  -> ' + s.yph());
+
+  console.log('');
+
+  console.log('s.seconds_per_mile() -> ' + s.seconds_per_mile());
+
+  console.log('s.pace_per_mile()    -> ' + s.pace_per_mile());
+
+  console.log('');
+
+  console.log('s.projected_time(d2)           -> ' + s.projected_time(d2));
+
+  console.log('s.projected_time(d2, "simple") -> ' + s.projected_time(d2, "simple"));
+
+  console.log('s.projected_time(d2, "riegel") -> ' + s.projected_time(d2, "riegel"));
 
   console.log('```');
 
   console.log('');
-
-  console.log('');
-
-  console.log('#### Age');
-
-  console.log('');
-
-  console.log('Construct an Age from either a Number or String value.');
-
-  console.log('');
-
-  console.log('Methods val(), max_pulse(), add(), and subtract() are available.');
-
-  console.log('Max pulse is based on the widely-known "220 - age" formula.');
-
-  a20 = new m26.Age(20.2);
-
-  a21 = new m26.Age(21);
-
-  a57 = new m26.Age("57.1");
-
-  console.log('```');
-
-  console.log('a20 = new m26.Age(20.2)');
-
-  console.log('a21 = new m26.Age(21)');
-
-  console.log('a57 = new m26.Age("57.1")');
-
-  console.log('a20.val()  ->  ' + a20.val());
-
-  console.log('a21.val()  ->  ' + a21.val());
-
-  console.log('a57.val()  ->  ' + a57.val());
-
-  console.log('a20.max_pulse()   ->  ' + a20.max_pulse());
-
-  console.log('a21.max_pulse()   ->  ' + a21.max_pulse());
-
-  console.log('a57.max_pulse()   ->  ' + a57.max_pulse());
-
-  console.log('a57.add(a20)      ->  ' + a57.add(a20));
-
-  console.log('a57.subtract(a20) ->  ' + a57.subtract(a20));
-
-  console.log('```');
-
-  console.log('');
-
-  console.log('#### AgeCalculator');
-
-  console.log('');
-
-  console.log('Calculate and return an Age object.');
-
-  console.log('');
-
-  a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01");
-
-  a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-11-01");
-
-  console.log('```');
-
-  console.log('a0 = m26.AgeCalculator.calculate("2014-10-01", "2014-11-01")');
-
-  console.log('a1 = m26.AgeCalculator.calculate("1960-10-01", "2014-10-01")');
-
-  console.log('a0.val()  ->  ' + a0.val());
-
-  console.log('a1.val()  ->  ' + a1.val());
-
-  console.log('```');
 
   console.log('');
 

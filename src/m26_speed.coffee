@@ -47,6 +47,15 @@ class Speed
       secs = @seconds_per_mile() * another_distance.as_miles()
       et = new ElapsedTime(secs);
       return et.as_hhmmss()
-    end
+
+    # def age_graded(dob, event_yyyy_mm_dd, base_yyyy_mm_dd)
+    #   @evt_age   = M26::Age.new(dob, event_yyyy_mm_dd)
+    #   @base_age  = M26::Age.new(dob, base_yyyy_mm_dd)
+    #   @ag_factor = (base_age.max_pulse / evt_age.max_pulse).to_f
+    #   @ag_secs   = (elapsed_time.secs.to_f) * ag_factor
+    #   @ag_time   = M26::ElapsedTime.new(ag_secs)
+    #   @ag_speed  = M26::Speed.new(distance, ag_time)
+    #   @ag_speed
+    # end
 
 root.Speed = Speed

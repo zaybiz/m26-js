@@ -12,7 +12,7 @@ describe 'Speed', ->
     expect(s.seconds_per_mile()).isWithin(0.000001, 900)
     expect(s.pace_per_mile()).toBe('15:00')
 
-  it 'calculates a marathon, with fractional numbers', ->
+  it 'calculates a marathon, with fractional pace_per_mile', ->
     d = new Distance(26.2)
     t = new ElapsedTime('03:47:30')
     s = new Speed(d, t)
@@ -22,3 +22,22 @@ describe 'Speed', ->
     expect(s.seconds_per_mile()).isWithin(0.000001, 520.992366412214)
     expect(s.pace_per_mile()).toBe('8:40.99')
 
+  it 'projected_time using a simple linear formula', ->
+    d1 = new Distance(10.0)
+    t  = new ElapsedTime('1:30:00')
+    s  = new Speed(d1, t)
+    expect(s.seconds_per_mile()).isWithin(0.000001, 540)
+    expect(s.pace_per_mile()).toBe('9:00')
+    d2 = new Distance(20.0)
+    hhmmss = s.projected_time(d2, 'simple')
+    expect(hhmmss).toBe('03:00:00')
+
+  it 'projected_time using the exponential riegel formula', ->
+    d1 = new Distance(10.0)
+    t  = new ElapsedTime('1:30:00')
+    s  = new Speed(d1, t)
+    expect(s.seconds_per_mile()).isWithin(0.000001, 540)
+    expect(s.pace_per_mile()).toBe('9:00')
+    d2 = new Distance(20.0)
+    hhmmss = s.projected_time(d2, 'riegel')
+    expect(hhmmss).toBe('03:07:38')
