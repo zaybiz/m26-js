@@ -101,6 +101,7 @@ s.pace_per_mile()    -> '8:40.99' # hh:mm:ss per hour
 
 ### Release History
 
+* 2014-11-01   v0.0.2  Initial release, updated main entry in package.json
 * 2014-11-01   v0.0.1  Initial release
 
 

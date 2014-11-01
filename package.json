@@ -1,9 +1,9 @@
 {
   "name":    "m26-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Node.js library for running, cycling, and swimming calculations.",
   "homepage": "https://github.com/cjoakim/m26-js",
-
+  "main": "lib/m26.js",
   "author": {
     "name": "Chris Joakim, JoakimSoftware LLC",
     "url":  "http://www.chrisjoakim.com"
@@ -19,7 +19,6 @@
     "url":  "https://github.com/cjoakim/m26-js"
   },
   "dependencies": {
-    "npm-init": "^1.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
