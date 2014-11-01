@@ -1,19 +1,18 @@
-# m26-js
+## m26-js
 
-## Purpose
+### Purpose
 
-A Node.js library for running, cycling, and swimming calculations, as well as heart-rate
-training-zone calculations
+A Node.js library for running, cycling, and swimming calculations.
 
-## Getting Started
+### Getting Started
 
 ```
 npm install m26-js
 ```
 
-## Examples
+### Examples
 
-### M26Distance
+#### M26Distance
 
 Creation and unit-of-measure conversion:
 
@@ -47,13 +46,48 @@ d3 = d1.subtract(d2)
 d3.as_miles() -> 20.0
 ```
 
+#### M26ElapsedTime
 
-## Release History
+Creation, formatting, and time calculation functions.
+
+Construct with a number of seconds:
+
+```
+t = new M26ElapsedTime(3665)
+t.as_hhmmss() -> '01:01:05'
+t.seconds()   ->  3665.0
+t.hours()     ->  1.0180555555555555
+```
+
+Construct from a hh:mm:ss String
+
+```
+t = new M26ElapsedTime('01:01:05')
+t.as_hhmmss() -> '01:01:05'
+t.seconds()   ->  3665.0
+```
+
+Construct from a mm:ss String
+
+```
+t = new M26ElapsedTime('1:5')
+t.as_hhmmss() -> '00:01:05'
+```
+
+Construct from a mm:ss String
+
+```
+t = new M26ElapsedTime('1:5')
+t.as_hhmmss() -> '00:01:05'
+```
+
+### Release History
 
 * 2014-11-01   v0.0.1  Initial release
 
 
-## Future Enhancements
+### Future Enhancements
 
-* Marathon training plan builder.
-* Ultramarathon calculator.
+# Add support for fractional seconds.
+# Add support for heart-rate training-zone calculation.
+# Add support for age-graded times.

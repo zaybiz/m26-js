@@ -35,3 +35,7 @@ describe 'M26ElapsedTime', ->
     expect(t.as_hhmmss()).toBe('00:00:05')
     expect(t.seconds()).isWithin(0.000001, 5.0)
     expect(t.hours()).isWithin(0.000001, 0.001388888888888889)
+
+  # it 'constructs with a fractional ss.fff string', ->
+  #   t = new M26ElapsedTime('5.123')
+  #   expect(t.as_hhmmss()).toBe('00:00:05')
