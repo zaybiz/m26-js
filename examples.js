@@ -83,7 +83,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('Methods val(), max_pulse(), add(), subtract() and training_zones() are available.');
 
-  console.log('Max pulse is based on the widely-known "220 - age" formula.');
+  console.log('Max-pulse and training-zones are based on the widely known "220 - age" formula.');
 
   a20 = new m26.Age(20.2);
 

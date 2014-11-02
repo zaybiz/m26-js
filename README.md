@@ -40,7 +40,7 @@ m26.Constants.SECONDS_PER_HOUR:    3600
 Construct an Age from either a Number or String value.
 
 Methods val(), max_pulse(), add(), subtract() and training_zones() are available.
-Max pulse is based on the widely-known "220 - age" formula.
+Max-pulse and training-zones are based on the widely known "220 - age" formula.
 ```
 a20 = new m26.Age(20.2)
 a21 = new m26.Age(21)
