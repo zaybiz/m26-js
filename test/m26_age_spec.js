@@ -20,7 +20,7 @@
       expect(a36.max_pulse()).isWithin(0.0000000001, 184.0);
       return expect(a57.max_pulse()).isWithin(0.0000000001, 163.0);
     });
-    return it("should add and subtract", function() {
+    it("should add and subtract", function() {
       var a16, a57, diff, sum;
       a16 = new Age(16.9);
       a57 = new Age(57.1);
@@ -28,6 +28,24 @@
       diff = a57.subtract(a16);
       expect(sum).isWithin(0.0000000001, 74.0);
       return expect(diff).isWithin(0.0000000001, 40.2);
+    });
+    return it("should calculate heart-rate training-zones", function() {
+      var a57, z1, z5, zones;
+      a57 = new Age(57.1);
+      zones = a57.training_zones();
+      expect(zones.length).toBe(5);
+      z1 = zones[0];
+      z5 = zones[4];
+      expect(z1.zone).toBe(1);
+      expect(z1.pulse).toBe(155);
+      expect(z1.age).isWithin(0.001, 57.1);
+      expect(z1.pct_max).isWithin(0.001, 0.95);
+      expect(z1.max).isWithin(0.001, 162.9);
+      expect(z5.zone).toBe(5);
+      expect(z5.pulse).toBe(122);
+      expect(z5.age).isWithin(0.001, 57.1);
+      expect(z5.pct_max).isWithin(0.001, 0.75);
+      return expect(z5.max).isWithin(0.001, 162.9);
     });
   });
 

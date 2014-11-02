@@ -2,7 +2,8 @@
 
 ### Purpose
 
-A Node.js library for running, cycling, swimming and age calculations, plus age-grading.
+A Node.js library for speed and pace calculations for sports like running and cycling.
+Age-graded times and heart-rate training-zones are also supported.
 
 ### Examples
 
@@ -22,7 +23,7 @@ m26 = require(m26-js")
 
 m26-js defines the following:
 ```
-m26.Constants.VERSION:             0.1.2
+m26.Constants.VERSION:             0.1.3
 m26.Constants.UOM_MILES:           m
 m26.Constants.UOM_KILOMETERS:      k
 m26.Constants.UOM_YARDS:           y
@@ -38,7 +39,7 @@ m26.Constants.SECONDS_PER_HOUR:    3600
 
 Construct an Age from either a Number or String value.
 
-Methods val(), max_pulse(), add(), and subtract() are available.
+Methods val(), max_pulse(), add(), subtract() and training_zones() are available.
 Max pulse is based on the widely-known "220 - age" formula.
 ```
 a20 = new m26.Age(20.2)
@@ -52,6 +53,9 @@ a21.max_pulse()   ->  199
 a57.max_pulse()   ->  162.9
 a57.add(a20)      ->  77.3
 a57.subtract(a20) ->  36.900000000000006
+
+zones = a57.training_zones()
+JSON.stringify(zones) -> [{"zone":1,"age":57.1,"max":162.9,"pct_max":0.95,"pulse":155},{"zone":2,"age":57.1,"max":162.9,"pct_max":0.9,"pulse":147},{"zone":3,"age":57.1,"max":162.9,"pct_max":0.85,"pulse":138},{"zone":4,"age":57.1,"max":162.9,"pct_max":0.8,"pulse":130},{"zone":5,"age":57.1,"max":162.9,"pct_max":0.75,"pulse":122}]
 ```
 
 #### AgeCalculator
@@ -135,15 +139,10 @@ s2.mph()  -> 5.770789859154929
 
 ### Release History
 
+* 2014-11-02   v0.1.3  Added Age.training_zones()
 * 2014-11-01   v0.1.2  Added Speed.age_graded()
 * 2014-11-01   v0.1.1  Added Speed.projected_time(), Age, AgeCalculator.
 * 2014-11-01   v0.1.0  Initial working version.
 * 2014-11-01   v0.0.3  alpha 3
 * 2014-11-01   v0.0.2  alpha 2
 * 2014-11-01   v0.0.1  alpha 1
-
-
-### Future Enhancements
-
-* Add support for fractional seconds.
-* Add support for heart-rate training-zone calculation.

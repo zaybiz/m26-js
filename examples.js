@@ -7,7 +7,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
  */
 
 (function() {
-  var a0, a1, a2, a20, a21, a57, d, d1, d2, d3, d4, d5, m26, s, s2, t, t1, t2;
+  var a0, a1, a2, a20, a21, a57, d, d1, d2, d3, d4, d5, m26, s, s2, t, t1, t2, zones;
 
   m26 = require("./lib/m26.js");
 
@@ -81,7 +81,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('');
 
-  console.log('Methods val(), max_pulse(), add(), and subtract() are available.');
+  console.log('Methods val(), max_pulse(), add(), subtract() and training_zones() are available.');
 
   console.log('Max pulse is based on the widely-known "220 - age" formula.');
 
@@ -114,6 +114,14 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
   console.log('a57.add(a20)      ->  ' + a57.add(a20));
 
   console.log('a57.subtract(a20) ->  ' + a57.subtract(a20));
+
+  console.log('');
+
+  zones = a57.training_zones();
+
+  console.log('zones = a57.training_zones()');
+
+  console.log('JSON.stringify(zones) -> ' + JSON.stringify(zones));
 
   console.log('```');
 

@@ -27,3 +27,22 @@ describe 'Age', ->
     diff = a57.subtract(a16)
     expect(sum).isWithin(0.0000000001, 74.0)
     expect(diff).isWithin(0.0000000001, 40.2)
+
+  it "should calculate heart-rate training-zones", ->
+    a57   = new Age(57.1)
+    zones = a57.training_zones()
+    # console.log(JSON.stringify(zones, null, 2))
+    expect(zones.length).toBe(5)
+    z1 = zones[0]
+    z5 = zones[4]
+    expect(z1.zone).toBe(1)
+    expect(z1.pulse).toBe(155)
+    expect(z1.age).isWithin(0.001, 57.1)
+    expect(z1.pct_max).isWithin(0.001, 0.95)
+    expect(z1.max).isWithin(0.001, 162.9)
+
+    expect(z5.zone).toBe(5)
+    expect(z5.pulse).toBe(122)
+    expect(z5.age).isWithin(0.001, 57.1)
+    expect(z5.pct_max).isWithin(0.001, 0.75)
+    expect(z5.max).isWithin(0.001, 162.9)
