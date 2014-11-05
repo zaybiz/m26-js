@@ -5,15 +5,6 @@ beforeEach ->
 
   jasmine.Expectation.addMatchers({
 
-    is11: () ->
-      {
-        compare: (actual) ->
-          if actual == 11
-            { pass: true, message: '' }
-          else
-            { pass: false, message: '' + actual + ' is not 11' }
-      }
-
     isWithin: (tolerance, expected) ->
       {
         compare: (actual, tolerance, expected) ->

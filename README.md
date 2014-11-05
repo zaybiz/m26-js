@@ -23,7 +23,7 @@ m26 = require(m26-js")
 
 m26-js defines the following:
 ```
-m26.Constants.VERSION:             0.1.3
+m26.Constants.VERSION:             0.1.4
 m26.Constants.UOM_MILES:           m
 m26.Constants.UOM_KILOMETERS:      k
 m26.Constants.UOM_YARDS:           y
@@ -139,6 +139,7 @@ s2.mph()  -> 5.770789859154929
 
 ### Release History
 
+* 2014-11-05   v0.1.4  Removed a spec_helper function.
 * 2014-11-02   v0.1.3  Added Age.training_zones()
 * 2014-11-01   v0.1.2  Added Speed.age_graded()
 * 2014-11-01   v0.1.1  Added Speed.projected_time(), Age, AgeCalculator.
