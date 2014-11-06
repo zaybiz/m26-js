@@ -139,7 +139,7 @@ s2.mph()  -> 5.770789859154929
 
 ### Release History
 
-* 2014-11-05   v0.1.5  Fix require statement in examples documentation.
+* 2014-11-06   v0.1.5  Fix require statement in examples documentation.
 * 2014-11-05   v0.1.4  Removed a spec_helper function.
 * 2014-11-02   v0.1.3  Added Age.training_zones()
 * 2014-11-01   v0.1.2  Added Speed.age_graded()
