@@ -19,7 +19,7 @@ console.log('```')
 console.log('')
 console.log('Require m26-js in your code:')
 console.log('```')
-console.log('m26 = require(m26-js")')
+console.log('m26 = require("m26-js")')
 console.log('```')
 console.log('')
 

@@ -35,7 +35,7 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('```');
 
-  console.log('m26 = require(m26-js")');
+  console.log('m26 = require("m26-js")');
 
   console.log('```');
 
