@@ -1,2 +1,9 @@
+*.tgz
+*.txt
+build.xml
 examples.js
-src/examples.coffee
+Gruntfile.js
+
+src/
+test/
+test-src/
