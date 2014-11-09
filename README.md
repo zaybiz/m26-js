@@ -25,15 +25,15 @@ Note: this library is implemented with CoffeeScript, and these examples are also
 
 m26-js defines the following:
 ```
-m26.Constants.VERSION:             0.1.5
+m26.Constants.VERSION:             0.2.0
 m26.Constants.UOM_MILES:           m
 m26.Constants.UOM_KILOMETERS:      k
 m26.Constants.UOM_YARDS:           y
 m26.Constants.UNITS_OF_MEASURE:    ["m","k","y"]
-m26.Constants.KILOMETERS_PER_MILE: 1.61290322581
+m26.Constants.KILOMETERS_PER_MILE: 1.609344
 m26.Constants.YARDS_PER_MILE:      1760
-m26.Constants.MILES_PER_KILOMETER: 0.62
-m26.Constants.YARDS_PER_KILOMETER: 1091.2
+m26.Constants.MILES_PER_KILOMETER: 0.621371192237334
+m26.Constants.YARDS_PER_KILOMETER: 1093.6132983377076
 m26.Constants.SECONDS_PER_HOUR:    3600
 ```
 
@@ -80,7 +80,7 @@ Methods uom(), as_miles(), as_kilometers(), as_yards(), add(), and subtract() ar
 d1 = new m26.Distance(26.2)
 d1.uom()           -> m
 d1.as_miles()      -> 26.2
-d1.as_kilometers() -> 42.258064516222
+d1.as_kilometers() -> 42.1648128
 d1.as_yards()      -> 46112
 ```
 
@@ -90,7 +90,7 @@ d2 = new m26.Distance(4.8)
 d3 = new m26.Distance(10.0, "k")
 d4 = d1.subtract(d3)
 d5 = d1.add(d2)
-d4.as_miles()      -> 20.00000000001364
+d4.as_miles()      -> 19.98628807762666
 d5.as_miles()      -> 31
 ```
 #### ElapsedTime
@@ -122,15 +122,15 @@ t  = new m26.ElapsedTime("04:10:00")
 s  = new m26.Speed(d, t)
 
 s.mph()  -> 6.287999999999999
-s.kph()  -> 10.14193548389328
+s.kph()  -> 10.119555071999999
 s.yph()  -> 11066.88
 
 s.seconds_per_mile() -> 572.5190839694657
 s.pace_per_mile()    -> 9:32.51
 
-s.projected_time(d2)           -> 04:55:48
-s.projected_time(d2, "simple") -> 04:55:48  # simple linear formula
-s.projected_time(d2, "riegel") -> 04:58:48  # exponential formula
+s.projected_time(d2)           -> 04:56:27
+s.projected_time(d2, "simple") -> 04:56:27  # simple linear formula
+s.projected_time(d2, "riegel") -> 04:59:30  # exponential formula
 
 a1 = new m26.Age(42.5)
 a2 = new m26.Age(57.1)
@@ -141,12 +141,13 @@ s2.mph()  -> 5.770789859154929
 
 ### Release History
 
-* 2014-11-06   v0.1.5  Fix require statement in examples documentation.
-* 2014-11-05   v0.1.4  Removed a spec_helper function.
-* 2014-11-02   v0.1.3  Added Age.training_zones()
-* 2014-11-01   v0.1.2  Added Speed.age_graded()
-* 2014-11-01   v0.1.1  Added Speed.projected_time(), Age, AgeCalculator.
-* 2014-11-01   v0.1.0  Initial working version.
-* 2014-11-01   v0.0.3  alpha 3
-* 2014-11-01   v0.0.2  alpha 2
-* 2014-11-01   v0.0.1  alpha 1
+* 2014-11-09  v0.2.0  Corrected the English-to-Metric and Metric-to-English conversions.
+* 2014-11-06  v0.1.5  Fix require statement in examples documentation.
+* 2014-11-05  v0.1.4  Removed a spec_helper function.
+* 2014-11-02  v0.1.3  Added Age.training_zones()
+* 2014-11-01  v0.1.2  Added Speed.age_graded()
+* 2014-11-01  v0.1.1  Added Speed.projected_time(), Age, AgeCalculator.
+* 2014-11-01  v0.1.0  Initial working version.
+* 2014-11-01  v0.0.3  alpha 3
+* 2014-11-01  v0.0.2  alpha 2
+* 2014-11-01  v0.0.1  alpha 1

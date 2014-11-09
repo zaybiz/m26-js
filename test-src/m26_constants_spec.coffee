@@ -3,7 +3,7 @@
 describe 'M26', ->
 
   it 'defines VERSION', ->
-    expect(Constants.VERSION).toBe('0.1.5')
+    expect(Constants.VERSION).toBe('0.2.0')
 
   it 'defines UOM_MILES', ->
     expect(Constants.UOM_MILES).toBe('m')
@@ -18,17 +18,22 @@ describe 'M26', ->
     expect(Constants.UNITS_OF_MEASURE).toEqual(['m', 'k', 'y'])
 
   it 'defines KILOMETERS_PER_MILE', ->
-    expect(Constants.KILOMETERS_PER_MILE).isWithin(0.000001, 1.61290322581)
+    expect(Constants.KILOMETERS_PER_MILE).isWithin(0.000001, 1.609344)
 
   it 'defines YARDS_PER_MILE', ->
-    expect(Constants.YARDS_PER_MILE).isWithin(0.000001,  1760.0)
+    expect(Constants.YARDS_PER_MILE).toBe(1760.0)
 
   it 'defines MILES_PER_KILOMETER', ->
-    expect(Constants.MILES_PER_KILOMETER).isWithin(0.000001, 0.62)
+    expect(Constants.MILES_PER_KILOMETER).isWithin(0.000001, 0.621371192237334)
 
   it 'defines YARDS_PER_KILOMETER', ->
-    expect(Constants.YARDS_PER_KILOMETER).isWithin(0.000001, 1091.2)
+    expect(Constants.YARDS_PER_KILOMETER).isWithin(0.000001, 1093.6132983377076)
+
+  it 'defines FEET_PER_KILOMETER', ->
+    expect(Constants.FEET_PER_KILOMETER).isWithin(0.000001, 3280.839895013123)
+
+  it 'defines FEET_PER_METER', ->
+    expect(Constants.FEET_PER_METER).isWithin(0.000001, 3.280839895013123)
 
   it 'defines SECONDS_PER_HOUR', ->
-    expect(Constants.SECONDS_PER_HOUR).toBeGreaterThan(3599.999)
-    expect(Constants.SECONDS_PER_HOUR).toBeLessThan(3600.001)
+    expect(Constants.SECONDS_PER_HOUR).toBe(3600.0)
