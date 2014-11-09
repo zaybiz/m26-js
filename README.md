@@ -19,6 +19,8 @@ Require m26-js in your code:
 m26 = require("m26-js")
 ```
 
+Note: this library is implemented with CoffeeScript, and these examples are also in CoffeeScript.
+
 #### Constants
 
 m26-js defines the following:

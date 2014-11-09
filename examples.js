@@ -41,6 +41,10 @@ Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail
 
   console.log('');
 
+  console.log('Note: this library is implemented with CoffeeScript, and these examples are also in CoffeeScript.');
+
+  console.log('');
+
   console.log('#### Constants');
 
   console.log('');
