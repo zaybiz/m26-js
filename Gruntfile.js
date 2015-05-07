@@ -2,6 +2,17 @@ module.exports = function (grunt) {
 
   var config = {
 
+    ts: {
+      default : {
+        src: ["src/*.ts"],
+        out:    'src/m26.js',
+        options: {
+          fast:   'never',
+          module: 'commonjs'
+        }
+      }
+    },
+
     typescript: {
       base: {
         src: ['src/**/*.ts'],
@@ -45,8 +56,9 @@ module.exports = function (grunt) {
   };
 
   grunt.initConfig(config);
+  grunt.loadNpmTasks("grunt-ts");
   grunt.loadNpmTasks('grunt-typescript');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
-  grunt.registerTask('default', [ 'typescript', 'coffee' ]);
+  grunt.registerTask('default', [ 'ts' ]);
 };

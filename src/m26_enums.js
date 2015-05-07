@@ -1,4 +1,3 @@
-// Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 (function (M26UOM) {
     M26UOM[M26UOM["MILES"] = 0] = "MILES";
     M26UOM[M26UOM["KILOMETERS"] = 1] = "KILOMETERS";

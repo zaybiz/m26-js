@@ -6,11 +6,11 @@ export declare class M26Constants {
     static UOM_KILOMETERS: string;
     static UOM_YARDS: string;
     static UNITS_OF_MEASURE: string[];
-    static KILOMETERS_PER_MILE: Number;
-    static MILES_PER_KILOMETER: Number;
-    static YARDS_PER_KILOMETER: Number;
-    static FEET_PER_KILOMETER: Number;
-    static FEET_PER_METER: Number;
-    static YARDS_PER_MILE: Number;
-    static SECONDS_PER_HOUR: Number;
+    static KILOMETERS_PER_MILE: number;
+    static MILES_PER_KILOMETER: number;
+    static YARDS_PER_KILOMETER: number;
+    static FEET_PER_KILOMETER: number;
+    static FEET_PER_METER: number;
+    static YARDS_PER_MILE: number;
+    static SECONDS_PER_HOUR: number;
 }

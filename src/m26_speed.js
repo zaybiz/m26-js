@@ -1,4 +1,3 @@
-// Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 var M26Speed = (function () {
     function M26Speed() {
     }

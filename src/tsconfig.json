@@ -21,8 +21,12 @@
         "./m26_distance.ts",
         "./m26_elapsed_time.d.ts",
         "./m26_elapsed_time.ts",
+        "./m26_enums.d.ts",
+        "./m26_enums.ts",
         "./m26_speed.d.ts",
-        "./m26_speed.ts"
+        "./m26_speed.ts",
+        "./m26_structs.d.ts",
+        "./m26_structs.ts"
     ],
     "compileOnSave": false
 }

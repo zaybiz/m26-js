@@ -1,8 +1,6 @@
-// Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 var M26Constants = (function () {
     function M26Constants() {
     }
-    // class variables
     M26Constants.VERSION = '0.3.0';
     M26Constants.UOM_MILES = 'm';
     M26Constants.UOM_KILOMETERS = 'k';
