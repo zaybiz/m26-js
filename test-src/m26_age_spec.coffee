@@ -1,6 +1,13 @@
 # Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
 
+assert = require("assert")
+should = require('should')
+os     = require('os')
+
+# grunt ; mocha test/m26_age_spec.js
+
 describe 'Age', ->
+
 
   it "should construct with either a String or Number arg", ->
     a1 = new Age(44.4)

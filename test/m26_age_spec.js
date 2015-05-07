@@ -1,4 +1,12 @@
 (function() {
+  var assert, os, should;
+
+  assert = require("assert");
+
+  should = require('should');
+
+  os = require('os');
+
   describe('Age', function() {
     it("should construct with either a String or Number arg", function() {
       var a1, a2;

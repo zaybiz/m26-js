@@ -1,0 +1,28 @@
+{
+    "version": "1.4.1",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*.ts"
+    ],
+    "files": [
+        "./m26_age.d.ts",
+        "./m26_age.ts",
+        "./m26_constants.d.ts",
+        "./m26_constants.ts",
+        "./m26_distance.d.ts",
+        "./m26_distance.ts",
+        "./m26_elapsed_time.d.ts",
+        "./m26_elapsed_time.ts",
+        "./m26_speed.d.ts",
+        "./m26_speed.ts"
+    ],
+    "compileOnSave": false
+}
