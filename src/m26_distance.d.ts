@@ -1,3 +1,5 @@
 /// <reference path="../typings/node/node.d.ts" />
 export declare class M26Distance {
+    value: number;
+    constructor(n: string);
 }

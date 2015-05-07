@@ -1,4 +1,5 @@
 /// <reference path="../typings/node/node.d.ts" />
+/// <reference path="m26_enums.d.ts" />
 export declare class M26Constants {
     static VERSION: string;
     static UOM_MILES: string;

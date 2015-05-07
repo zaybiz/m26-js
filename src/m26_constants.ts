@@ -1,8 +1,10 @@
 // Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 
 /// <reference path="../typings/node/node.d.ts" />
+/// <reference path="m26_enums.d.ts" />
 
-import os = require('os');
+import os    = require('os');
+import enums = require('./m26_enums');
 
 export class M26Constants {
 
@@ -12,7 +14,7 @@ export class M26Constants {
   static UOM_KILOMETERS      : string = 'k';
   static UOM_YARDS           : string = 'y';
 
-  static UNITS_OF_MEASURE    : string[] = [ M26Constants.UOM_MILES, M26Constants.UOM_KILOMETERS, M26Constants.UOM_YARDS];
+  static UNITS_OF_MEASURE    : string[] = [ M26Constants.UOM_MILES, M26Constants.UOM_KILOMETERS, M26Constants.UOM_YARDS ];
 
   static KILOMETERS_PER_MILE : Number = 1.609344;
   static MILES_PER_KILOMETER : Number = 0.621371192237334;
