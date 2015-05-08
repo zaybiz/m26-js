@@ -1,10 +1,14 @@
 // Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 
 /// <reference path="../typings/node/node.d.ts" />
-/// <reference path="m26_enums.d.ts" />
 
-import os    = require('os');
-import enums = require('./m26_enums');
+import os = require('os');
+
+export enum M26UOM {
+  MILES,
+  KILOMETERS,
+  YARDS
+}
 
 export class M26Constants {
 
@@ -24,4 +28,5 @@ export class M26Constants {
   static YARDS_PER_MILE:number = 1760.0;
   static SECONDS_PER_HOUR:number = 3600.0;
 }
+
 

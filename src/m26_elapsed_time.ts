@@ -4,7 +4,11 @@
 
 import os = require('os');
 
-export class M26ElapsedTime {
+module m26 {
 
+  export class M26ElapsedTime {
+
+
+  }
 
 }

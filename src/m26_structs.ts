@@ -3,3 +3,8 @@
 /// <reference path="../typings/node/node.d.ts" />
 
 import os = require('os');
+
+module m26 {
+
+
+}

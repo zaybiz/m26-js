@@ -2,10 +2,23 @@ module.exports = function (grunt) {
 
   var config = {
 
+    clean: {
+      lib:  ['lib/*.*'],
+      test: ['test/*.js', 'test/*.d.ts']
+    },
+
+    concat: {
+      lib: {
+        src: ['src/*.js'],
+        dest: 'lib/m26.js'
+      }
+    },
+
     ts: {
       default : {
-        src: ["src/*.ts"],
-        out:    'src/m26.js',
+        files: [
+          { src: ['src/m26_constants.ts'], dest: 'lib/m26.js' }
+        ],
         options: {
           fast:   'never',
           module: 'commonjs'
@@ -15,7 +28,7 @@ module.exports = function (grunt) {
 
     typescript: {
       base: {
-        src: ['src/**/*.ts'],
+        src: ['src/*.ts'],
         dest: 'lib/m26.js',
         options: {
           module: 'commonjs', // commonjs or amd
@@ -42,7 +55,9 @@ module.exports = function (grunt) {
   };
 
   grunt.initConfig(config);
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks("grunt-ts");
   grunt.loadNpmTasks('grunt-typescript');
-  grunt.registerTask('default', [ 'ts' ]);
+  grunt.registerTask('default', [ 'clean:lib', 'clean:test', 'ts', 'concat:lib' ]);
 };

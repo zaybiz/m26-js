@@ -151,3 +151,8 @@ s2.mph()  -> 5.770789859154929
 * 2014-11-01  v0.0.3  alpha 3
 * 2014-11-01  v0.0.2  alpha 2
 * 2014-11-01  v0.0.1  alpha 1
+
+
+### Notes
+
+https://github.com/palantir/tslint

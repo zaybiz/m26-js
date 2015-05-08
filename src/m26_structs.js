@@ -1,1 +1,1 @@
-//# sourceMappingURL=m26_structs.js.map
+// Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
