@@ -17,6 +17,7 @@ grunt ts
 #tsc -d --module commonjs  src/m26_elapsed_time.ts
 #tsc -d --module commonjs  src/m26_speed.ts
 
+
 echo 'list of src/*.d.ts files:'
 ls -al src/*.d.ts
 
@@ -28,4 +29,7 @@ ls -al lib/*.*
 
 date
 
-echo 'done'
+tsc -d --module commonjs test/m26_age_test.ts
+
+mocha
+
