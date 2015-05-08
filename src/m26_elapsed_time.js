@@ -1,3 +1,4 @@
+// Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 var M26ElapsedTime = (function () {
     function M26ElapsedTime() {
     }

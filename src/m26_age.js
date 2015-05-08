@@ -1,3 +1,4 @@
+// Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 var M26Age = (function () {
     function M26Age(n) {
         this.value = 0;
