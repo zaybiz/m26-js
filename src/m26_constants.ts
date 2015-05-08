@@ -4,12 +4,6 @@
 
 import os = require('os');
 
-export enum M26UOM {
-  MILES,
-  KILOMETERS,
-  YARDS
-}
-
 export class M26Constants {
 
   // class variables
@@ -28,5 +22,3 @@ export class M26Constants {
   static YARDS_PER_MILE:number = 1760.0;
   static SECONDS_PER_HOUR:number = 3600.0;
 }
-
-

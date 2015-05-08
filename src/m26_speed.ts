@@ -4,11 +4,9 @@
 
 import os = require('os');
 
-module m26 {
 
-  export class M26Speed {
+export class M26Speed {
 
-
-  }
 
 }
+

@@ -3,7 +3,8 @@ module.exports = function (grunt) {
   var config = {
 
     clean: {
-      lib:  ['lib/*.*'],
+      lib:  ['lib/*.*', 'lib/*.d.ts'],
+      src:  ['src/*.js'],
       test: ['test/*.js', 'test/*.d.ts']
     },
 
@@ -15,9 +16,18 @@ module.exports = function (grunt) {
     },
 
     ts: {
-      default : {
+      src : {
         files: [
-          { src: ['src/m26_constants.ts'], dest: 'lib/m26.js' }
+          { src: ['src/*.ts'], dest: 'lib/m26.js' }
+        ],
+        options: {
+          fast:   'never',
+          module: 'commonjs'
+        }
+      },
+      test : {
+        files: [
+          { src: ['test/*.ts'] }
         ],
         options: {
           fast:   'never',
@@ -40,6 +50,14 @@ module.exports = function (grunt) {
       }
     },
 
+    copy: {
+      dts: {
+        files: [
+          { expand: true, src: ['src/*.d.ts'], dest: 'lib/', flatten: true }
+        ],
+      },
+    },
+
     mocha_istanbul: {
       coverage: {
         src: 'test', // the folder, not the files
@@ -57,7 +75,9 @@ module.exports = function (grunt) {
   grunt.initConfig(config);
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks("grunt-ts");
   grunt.loadNpmTasks('grunt-typescript');
-  grunt.registerTask('default', [ 'clean:lib', 'clean:test', 'ts', 'concat:lib' ]);
+  grunt.loadNpmTasks('grunt-mocha-istanbul');
+  grunt.registerTask('default', [ 'clean:lib', 'clean:src', 'clean:test', 'ts:src', 'ts:test', 'concat:lib', 'copy:dts', 'mocha_istanbul:coverage' ]);
 };

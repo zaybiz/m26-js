@@ -29,6 +29,7 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-concat": "~0.5.0",
     "grunt-contrib-copy": "~0.8.0",
+    "grunt-dts-concat": "~0.1.6",
     "grunt-mocha-istanbul": "~2.4.0",
     "istanbul": "~0.3.13",
     "mocha": "~2.2.4",
