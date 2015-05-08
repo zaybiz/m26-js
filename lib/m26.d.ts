@@ -1,4 +1,5 @@
 /// <reference path="../typings/node/node.d.ts" />
+
 export declare class M26Age {
     value: number;
     constructor(n: string);
@@ -9,7 +10,6 @@ export declare class M26Age {
     private populated(obj);
 }
 
-/// <reference path="../typings/node/node.d.ts" />
 export declare class M26Constants {
     static VERSION: string;
     static UOM_MILES: string;
@@ -25,8 +25,6 @@ export declare class M26Constants {
     static SECONDS_PER_HOUR: number;
 }
 
-/// <reference path="../typings/node/node.d.ts" />
-/// <reference path="m26_constants.d.ts" />
 export declare class M26Distance {
     value: number;
     uom: string;
@@ -39,10 +37,8 @@ export declare class M26Distance {
     private populated(obj);
 }
 
-/// <reference path="../typings/node/node.d.ts" />
 export declare class M26ElapsedTime {
 }
 
-/// <reference path="../typings/node/node.d.ts" />
 export declare class M26Speed {
 }

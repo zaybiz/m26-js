@@ -6,6 +6,23 @@ module.exports = function(grunt) {
 
   grunt.registerTask('scrub-dts', 'scrub-dts', function() {
     console.log('scrub-dts');
+    var lines = fs.readFileSync('lib/m26.d.ts', 'utf-8').toString().split("\n");
+    var filtered_lines = [];
+    filtered_lines.push('/// <reference path="../typings/node/node.d.ts" />');
+    filtered_lines.push('');
+
+    for (i = 0; i < lines.length; i++) {
+      var line = lines[i];
+      if (line.indexOf('///') >= 0) {
+        // filtered_lines.push('');
+      }
+      else {
+        filtered_lines.push(line);
+      }
+    }
+    content = filtered_lines.join("\n");
+    fs.writeFileSync('lib/m26.d.ts', content, 'utf8');
+    console.log('file written: lib/m26.d.ts');
   });
 
   grunt.registerTask('build-timestamp', 'Create a build_timestamp.txt file', function() {
