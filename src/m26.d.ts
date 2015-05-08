@@ -4,4 +4,3 @@
 /// <reference path="m26_distance.d.ts" />
 /// <reference path="m26_elapsed_time.d.ts" />
 /// <reference path="m26_speed.d.ts" />
-/// <reference path="m26_structs.d.ts" />

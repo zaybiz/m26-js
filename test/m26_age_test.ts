@@ -1,13 +1,6 @@
 /// <reference path="../typings/mocha/mocha.d.ts" />
 /// <reference path="../typings/chai/chai.d.ts" />
-
 /// <reference path="../lib/m26.d.ts" />
-/// <reference path="../lib/m26_constants.d.ts" />
-/// <reference path="../lib/m26_age.d.ts" />
-/// <reference path="../lib/m26_distance.d.ts" />
-/// <reference path="../lib/m26_elapsed_time.d.ts" />
-/// <reference path="../lib/m26_speed.d.ts" />
-/// <reference path="../lib/m26_structs.d.ts" />
 
 // See http://dinozafirakos.com/2014/07/21/testing-with-mocha-chai-and-typescript/
 //
@@ -18,6 +11,7 @@ import chai = require('chai');
 import m26  = require('../lib/m26');
 
 var expect = chai.expect;
+var M26Age  = m26.M26Age;
 
 describe('User Model Unit Tests:', () => {
 
@@ -32,4 +26,15 @@ describe('User Model Unit Tests:', () => {
             done();
         });
     });
+});
+
+describe('Class M26Age:', () => {
+
+  describe('constructor', () => {
+    it ('should cast a string to a number', (done) => {
+      var a = new M26Age('55.5');
+      expect(a.val()).to.be.closeTo(55.5, 0.0000000001);
+    });
+
+  });
 });
