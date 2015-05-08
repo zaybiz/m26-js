@@ -27,20 +27,6 @@ module.exports = function (grunt) {
       }
     },
 
-    coffee: {
-      compile: {
-        options: {
-          join: true
-        },
-        files: {
-          'test/m26_age_spec.js':            ['test-src/m26_age_spec.coffee'],
-
-
-          'examples.js':                     ['test-src/examples.coffee']
-        }
-      }
-    },
-
     mocha_istanbul: {
       coverage: {
         src: 'test', // the folder, not the files
@@ -58,7 +44,5 @@ module.exports = function (grunt) {
   grunt.initConfig(config);
   grunt.loadNpmTasks("grunt-ts");
   grunt.loadNpmTasks('grunt-typescript');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.registerTask('default', [ 'ts' ]);
 };
