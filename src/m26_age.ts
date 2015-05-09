@@ -10,9 +10,9 @@ export class M26Age {
   // instance variables
   value:number = 0;
 
+  // Overloaded constructor method; receives either a number or string arg.
   constructor(n:string);
   constructor(n:number);
-
   constructor(n:any) {
     if (n && typeof n == "number") {
       this.value = n;

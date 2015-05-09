@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f40438-ce56-47ea-b79f-74b307fbe2ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.d.ts" afterPath="$PROJECT_DIR$/lib/m26.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.js.map" afterPath="$PROJECT_DIR$/lib/m26.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.js" afterPath="$PROJECT_DIR$/lib/m26.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26.ts" afterPath="$PROJECT_DIR$/src/m26.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_age.d.ts" afterPath="$PROJECT_DIR$/src/m26_age.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26_age.js.map" afterPath="$PROJECT_DIR$/lib/m26_age.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26_age.js" afterPath="$PROJECT_DIR$/lib/m26_age.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_age.ts" afterPath="$PROJECT_DIR$/src/m26_age.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_age_test.js.map" afterPath="$PROJECT_DIR$/test/m26_age_test.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_age_test.js" afterPath="$PROJECT_DIR$/test/m26_age_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_age_test.ts" afterPath="$PROJECT_DIR$/test/m26_age_test.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="m26-js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="m26_age.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="m26_age.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/m26_age.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.21161826">
+              <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -74,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="m26_age_test.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="m26_age_test.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/m26_age_test.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5062241">
+            <state vertical-scroll-proportion="0.0">
               <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
               <folding />
             </state>
@@ -135,8 +124,8 @@
         <option value="$PROJECT_DIR$/src/tsconfig.json" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/src/m26.ts" />
-        <option value="$PROJECT_DIR$/src/m26_age.ts" />
         <option value="$PROJECT_DIR$/test/m26_age_test.ts" />
+        <option value="$PROJECT_DIR$/src/m26_age.ts" />
       </list>
     </option>
   </component>
@@ -689,14 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26_age.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test-src/m26_age_spec.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -707,8 +688,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/m26_age_test.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5062241">
+        <state vertical-scroll-proportion="0.0">
           <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/m26_age.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21161826">
+          <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
           <folding />
         </state>
       </provider>
