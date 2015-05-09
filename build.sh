@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-echo "cleaning src dir for shell compiles ..."
+echo "cleaning lib and src directories ..."
+rm lib/*.*
 rm src/*.js
 rm src/*.js.map
 rm src/*.d.ts
@@ -15,11 +16,9 @@ tsc -d --module commonjs  src/m26_elapsed_time.ts
 tsc -d --module commonjs  src/m26_speed.ts
 
 node src/packager.js js
+node src/packager.js dts
 
-node src/packager.js tsd
+sed -f dts.sed lib/m26.d.ts.pkg > lib/m26.d.ts
 
-#echo "executing grunt build"
-#grunt build
-
-#echo "executing grunt test"
-#grunt test
+echo "executing grunt test"
+grunt test

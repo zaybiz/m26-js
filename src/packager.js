@@ -9,7 +9,7 @@ var Packager = (function () {
             case 'js':
                 this.package_js();
                 break;
-            case 'tsd':
+            case 'dts':
                 this.package_dts();
                 break;
         }
@@ -57,7 +57,7 @@ var Packager = (function () {
                 }
             }
         }
-        this.write_file('lib/m26.d.ts', all_lines);
+        this.write_file('lib/m26.d.ts.pkg', all_lines);
     };
     Packager.prototype.js_files = function () {
         var list = [];
@@ -101,6 +101,9 @@ var Packager = (function () {
     };
     Packager.prototype.omit_dts_line = function (line) {
         if (line.trim().indexOf('//') == 0) {
+            return true;
+        }
+        if (line.indexOf('require(') > 0) {
             return true;
         }
         return false;

@@ -53,5 +53,5 @@ export declare class M26ElapsedTime {
 }
 
 export declare class M26Speed {
-    constructor(dist: M26Distance, time: M26ElapsedTime);
+    constructor(dist: d.M26Distance, time: t.M26ElapsedTime);
 }

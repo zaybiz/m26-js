@@ -16,7 +16,7 @@ export class Packager {
       case 'js':
         this.package_js();
         break;
-      case 'tsd':
+      case 'dts':
         this.package_dts();
         break;
     }
@@ -70,7 +70,7 @@ export class Packager {
         }
       }
     }
-    this.write_file('lib/m26.d.ts', all_lines);
+    this.write_file('lib/m26.d.ts.pkg', all_lines);
   }
 
   js_files() : string[] {
@@ -119,6 +119,9 @@ export class Packager {
 
   omit_dts_line(line:string) : boolean {
     if (line.trim().indexOf('//') == 0) {
+      return true;
+    }
+    if (line.indexOf('require(') > 0) {
       return true;
     }
     return false;
