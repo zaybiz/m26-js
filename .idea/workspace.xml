@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f40438-ce56-47ea-b79f-74b307fbe2ce" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/m26_age_test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/m26_distance_test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/m26_elapsed_time_test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/m26_speed_test.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dts.sed" afterPath="$PROJECT_DIR$/dts.sed" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.d.ts.pkg" afterPath="$PROJECT_DIR$/lib/m26.d.ts.pkg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.d.ts" afterPath="$PROJECT_DIR$/lib/m26.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.js" afterPath="$PROJECT_DIR$/lib/m26.js" />
@@ -14,6 +9,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_speed.js" afterPath="$PROJECT_DIR$/src/m26_speed.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_speed.ts" afterPath="$PROJECT_DIR$/src/m26_speed.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_speed_test.js.map" afterPath="$PROJECT_DIR$/test/m26_speed_test.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_speed_test.js" afterPath="$PROJECT_DIR$/test/m26_speed_test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_speed_test.ts" afterPath="$PROJECT_DIR$/test/m26_speed_test.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,8 +35,8 @@
       <file leaf-file-name="m26_speed_test.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/m26_speed_test.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89419085">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.78838176">
+              <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -60,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/m26_speed.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="29" />
+              <caret line="67" column="55" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -70,17 +66,7 @@
         <entry file="file://$PROJECT_DIR$/lib/m26.d.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m26_speed_spec.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test-src/m26_speed_spec.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/lib/m26.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,11 +102,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="m26_elapsed_time.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/m26_elapsed_time.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="m26_speed.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/m26_speed.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+              <caret line="37" column="19" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m26_speed_spec.coffee" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test-src/m26_speed_spec.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="24" selection-start-line="35" selection-start-column="0" selection-end-line="42" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -164,8 +170,8 @@
         <option value="$PROJECT_DIR$/build.sh" />
         <option value="$PROJECT_DIR$/src/packager.ts" />
         <option value="$PROJECT_DIR$/test/m26_elapsed_time_test.ts" />
-        <option value="$PROJECT_DIR$/src/m26_speed.ts" />
         <option value="$PROJECT_DIR$/dts.sed" />
+        <option value="$PROJECT_DIR$/src/m26_speed.ts" />
         <option value="$PROJECT_DIR$/test/m26_speed_test.ts" />
       </list>
     </option>
@@ -678,14 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26_elapsed_time.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42323652">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -729,15 +727,7 @@
     <entry file="file://$PROJECT_DIR$/lib/m26.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26_elapsed_time.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -745,7 +735,7 @@
     <entry file="file://$PROJECT_DIR$/lib/m26.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -758,30 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26_speed.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-src/m26_speed_spec.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26_speed.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dts.sed">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -790,10 +756,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test-src/m26_speed_spec.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="24" selection-start-line="35" selection-start-column="0" selection-end-line="42" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/m26_speed.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/m26_elapsed_time.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/m26_elapsed_time.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/m26_speed.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="55" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/m26_speed_test.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89419085">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.78838176">
+          <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
           <folding />
         </state>
       </provider>

@@ -16,4 +16,5 @@ export declare class M26Speed {
     seconds_per_mile(): number;
     pace_per_mile(): string;
     age_graded(event_age: a.M26Age, graded_age: a.M26Age): M26Speed;
+    projected_time(another_distance: d.M26Distance, algorithm?: string): string;
 }

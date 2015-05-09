@@ -19,33 +19,34 @@ var M26ElapsedTime = t.M26ElapsedTime;   // OMIT
 
 export class M26Speed {
 
-  constructor(public dist:d.M26Distance, public etime:t.M26ElapsedTime) { }
+  constructor(public dist:d.M26Distance, public etime:t.M26ElapsedTime) {
+  }
 
-  mph() : number {
+  mph():number {
 
     return this.dist.as_miles() / this.etime.hours();
   }
 
-  kph() : number {
+  kph():number {
 
     return this.dist.as_kilometers() / this.etime.hours();
   }
 
-  yph() : number {
+  yph():number {
 
     return this.dist.as_yards() / this.etime.hours();
   }
 
-  seconds_per_mile() : number {
+  seconds_per_mile():number {
 
     return this.etime.secs / this.dist.as_miles();
   }
 
-  pace_per_mile() : string {
+  pace_per_mile():string {
     var spm = this.seconds_per_mile();
-    var mm  = Math.floor(spm / 60.0);
-    var ss  = spm - (mm * 60.0);
-    var s   = '';
+    var mm = Math.floor(spm / 60.0);
+    var ss = spm - (mm * 60.0);
+    var s = '';
 
     if (ss < 10) {
       s = '0' + ss;
@@ -59,21 +60,28 @@ export class M26Speed {
     return '' + mm + ':' + s;
   }
 
-  age_graded(event_age:a.M26Age, graded_age:a.M26Age) : M26Speed {
+  age_graded(event_age:a.M26Age, graded_age:a.M26Age):M26Speed {
 
-    var ag_factor  = event_age.max_pulse() / graded_age.max_pulse();
+    var ag_factor = event_age.max_pulse() / graded_age.max_pulse();
     var event_secs = this.etime.secs;
     var graded_secs = event_secs * ag_factor;
     var graded_etime = new M26ElapsedTime(graded_secs);
     return new M26Speed(this.dist, graded_etime);
   }
 
-  //age_graded: (event_age, graded_age) ->
-  //ag_factor = event_age.max_pulse() / graded_age.max_pulse()
-  //event_secs = this.et.seconds()
-  //graded_secs = event_secs * ag_factor
-  //graded_et   = new ElapsedTime(graded_secs)
-  //new Speed(this.d, graded_et)
+  projected_time(another_distance:d.M26Distance, algorithm = 'simple'):string {
 
+    if (algorithm == 'riegel') {
+      var t1 = this.etime.secs;
+      var d1 = this.dist.as_miles();
+      var d2 = another_distance.as_miles();
+      var t2 = t1 * Math.pow((d2 / d1), 1.06);
+      return new M26ElapsedTime(t2).as_hhmmss();
+    }
+    else {
+      var secs = this.seconds_per_mile() * another_distance.as_miles();
+      return new M26ElapsedTime(secs).as_hhmmss();
+    }
+  }
 }
 

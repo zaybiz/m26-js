@@ -64,4 +64,35 @@ describe('Class M26Speed:', () => {
 
   });
 
+  describe('time projection', () => {
+
+    it('projected_time using a simple linear formula', (done) => {
+      var d1  = new M26Distance(10.0);
+      var t  = new M26ElapsedTime('1:30:00');
+      var s  = new M26Speed(d1, t);
+      expect(s.seconds_per_mile()).to.be.closeTo(540,  0.0000000001);
+      expect(s.pace_per_mile()).to.be.eql('9:00');
+
+      var d2  = new M26Distance(20.0);
+      var hhmmss = s.projected_time(d2);
+      expect(hhmmss).to.be.eql('03:00:00');
+      done();
+    });
+
+    it('projected_time using the exponential riegel formula', (done) => {
+      var d1  = new M26Distance(10.0);
+      var t  = new M26ElapsedTime('1:30:00');
+      var s  = new M26Speed(d1, t);
+      expect(s.seconds_per_mile()).to.be.closeTo(540,  0.0000000001);
+      expect(s.pace_per_mile()).to.be.eql('9:00');
+
+      var d2  = new M26Distance(20.0);
+      var hhmmss = s.projected_time(d2, 'riegel');
+      var match_idx = hhmmss.indexOf('03:07:38')
+      expect(match_idx).to.be.eql(0);
+      done();
+    });
+
+  });
+
 });

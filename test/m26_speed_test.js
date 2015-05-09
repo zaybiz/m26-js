@@ -32,7 +32,7 @@ describe('Class M26Speed:', function () {
         });
     });
     describe('age grading', function () {
-        it('constructor with a number of seconds', function (done) {
+        it('age-grades a given marathon time to several ages', function (done) {
             var d = new M26Distance(26.2);
             var t = new M26ElapsedTime('3:47:30');
             var s1 = new M26Speed(d, t);
@@ -44,6 +44,31 @@ describe('Class M26Speed:', function () {
             expect(s1.mph()).to.be.closeTo(6.90989010989011, 0.0000000001);
             expect(s2.mph()).to.be.closeTo(6.870961151524531, 0.0000000001);
             expect(s3.mph()).to.be.closeTo(6.341527317752669, 0.0000000001);
+            done();
+        });
+    });
+    describe('time projection', function () {
+        it('projected_time using a simple linear formula', function (done) {
+            var d1 = new M26Distance(10.0);
+            var t = new M26ElapsedTime('1:30:00');
+            var s = new M26Speed(d1, t);
+            expect(s.seconds_per_mile()).to.be.closeTo(540, 0.0000000001);
+            expect(s.pace_per_mile()).to.be.eql('9:00');
+            var d2 = new M26Distance(20.0);
+            var hhmmss = s.projected_time(d2);
+            expect(hhmmss).to.be.eql('03:00:00');
+            done();
+        });
+        it('projected_time using the exponential riegel formula', function (done) {
+            var d1 = new M26Distance(10.0);
+            var t = new M26ElapsedTime('1:30:00');
+            var s = new M26Speed(d1, t);
+            expect(s.seconds_per_mile()).to.be.closeTo(540, 0.0000000001);
+            expect(s.pace_per_mile()).to.be.eql('9:00');
+            var d2 = new M26Distance(20.0);
+            var hhmmss = s.projected_time(d2, 'riegel');
+            var match_idx = hhmmss.indexOf('03:07:38');
+            expect(match_idx).to.be.eql(0);
             done();
         });
     });
