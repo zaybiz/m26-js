@@ -11,12 +11,12 @@ import os  = require('os');
 import c   = require('./m26_constants');
 import a   = require('./m26_age');
 import d   = require('./m26_distance');
-import et  = require('./m26_elapsed_time');
-import sp  = require('./m26_speed');
+import t   = require('./m26_elapsed_time');
+import s   = require('./m26_speed');
 
 export var M26Constants   = c.M26Constants;
 export var M26Age         = a.M26Age;
 export var M26Distance    = d.M26Distance;
-export var M26ElapsedTime = et.M26ElapsedTime;
-export var M26Speed       = sp.M26Speed;
+export var M26ElapsedTime = t.M26ElapsedTime;
+export var M26Speed       = s.M26Speed;
 

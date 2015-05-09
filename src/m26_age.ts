@@ -10,9 +10,16 @@ export class M26Age {
   // instance variables
   value:number = 0;
 
-  constructor(n:string) {
+  constructor(n:string);
+  constructor(n:number);
 
-    this.value = parseFloat(n);
+  constructor(n:any) {
+    if (n && typeof n == "number") {
+      this.value = n;
+    }
+    if (n && typeof n == "string") {
+      this.value = parseFloat(n);
+    }
   }
 
   val():number {
@@ -30,17 +37,17 @@ export class M26Age {
     }
   }
 
-  add(another_instance:M26Age):void {
+  add(another_instance:M26Age):number {
 
     if (another_instance) {
-      this.value = this.value + another_instance.value;
+      return this.value + another_instance.value;
     }
   }
 
-  subtract(another_instance:M26Age):void {
+  subtract(another_instance:M26Age):number {
 
     if (another_instance) {
-      this.value = this.value - another_instance.value;
+      return this.value - another_instance.value;
     }
   }
 
