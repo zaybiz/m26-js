@@ -2,11 +2,6 @@
 /// <reference path="../typings/chai/chai.d.ts" />
 /// <reference path="../lib/m26.d.ts" />
 
-// See http://dinozafirakos.com/2014/07/21/testing-with-mocha-chai-and-typescript/
-//
-// $ tsc -d --module commonjs test/m26_age_test.ts
-// $ mocha
-
 import chai = require('chai');
 import m26  = require('../lib/m26');
 

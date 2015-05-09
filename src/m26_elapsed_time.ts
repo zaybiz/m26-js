@@ -8,6 +8,7 @@ import c   = require('./m26_constants');
 
 var M26Constants = c.M26Constants;
 
+
 export class M26ElapsedTime {
 
   // instance variables
@@ -52,19 +53,23 @@ export class M26ElapsedTime {
 
   private initialize_from_string(n:string) {
 
-  //  tokens = s.split(':')
-  //  if tokens.length is 3
-  //@hh = parseInt(tokens[0], 10)
-  //@mm = parseInt(tokens[1], 10)
-  //@ss = parseInt(tokens[2], 10)
-  //else if tokens.length is 2
-  //@mm = parseInt(tokens[0], 10)
-  //@ss = parseInt(tokens[1], 10)
-  //else if tokens.length is 1
-  //@ss = parseInt(tokens[0], 10)
-  //else
-  //@ss = parseInt(s)
-  //@secs = (@hh * 3600) + (@mm * 60) + @ss
+    var tokens = n.split(':');
+
+    switch (tokens.length) {
+      case 3:
+        this.hh = parseInt(tokens[0], 10);
+        this.mm = parseInt(tokens[1], 10);
+        this.ss = parseInt(tokens[2], 10);
+        break;
+      case 2:
+        this.mm = parseInt(tokens[0], 10);
+        this.ss = parseInt(tokens[1], 10);
+        break;
+      case 1:
+        this.ss = parseInt(tokens[0], 10);
+        break;
+    }
+    this.secs = (this.hh * 3600) + (this.mm * 60) + this.ss;
   }
 
   private zero_pad(n:number) : string {

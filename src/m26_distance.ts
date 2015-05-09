@@ -3,11 +3,9 @@
 /// <reference path="../typings/node/node.d.ts" />
 /// <reference path="m26_constants.d.ts" />
 
-import os  = require('os');
 import c   = require('./m26_constants');
 
 var M26Constants = c.M26Constants;
-
 
 export class M26Distance {
 

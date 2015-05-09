@@ -24,10 +24,10 @@ class ElapsedTime
   initialize_from_string: (s) ->
     try
       tokens = s.split(':')
-      if tokens.length is 3
-        @hh = parseInt(tokens[0], 10)
-        @mm = parseInt(tokens[1], 10)
-        @ss = parseInt(tokens[2], 10)
+      if tokens.length is 3        @hh = parseInt(tokens[0], 10)
+      @mm = parseInt(tokens[1], 10)
+      @ss = parseInt(tokens[2], 10)
+
       else if tokens.length is 2
         @mm = parseInt(tokens[0], 10)
         @ss = parseInt(tokens[1], 10)

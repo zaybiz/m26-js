@@ -2,8 +2,6 @@
 
 /// <reference path="../typings/node/node.d.ts" />
 
-import os = require('os');
-
 export class M26Constants {
 
   // class variables
