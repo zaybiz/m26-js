@@ -18,6 +18,17 @@ describe('Class M26Speed:', function () {
             expect(s.pace_per_mile()).to.be.eql('15:00');
             done();
         });
+        it('calculates a marathon, with fractional pace_per_mile', function (done) {
+            var d = new M26Distance(26.2);
+            var t = new M26ElapsedTime('3:47:30');
+            var s = new M26Speed(d, t);
+            expect(s.mph()).to.be.closeTo(6.90989010989011, 0.0000000001);
+            expect(s.kph()).to.be.closeTo(11.120390189010989, 0.0000000001);
+            expect(s.yph()).to.be.closeTo(12161.4065934066, 0.0000000001);
+            expect(s.seconds_per_mile()).to.be.closeTo(520.992366412214, 0.0000000001);
+            expect(s.pace_per_mile()).to.be.eql('8:40.99');
+            done();
+        });
     });
     describe('add and subtract', function () {
     });

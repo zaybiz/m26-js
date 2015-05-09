@@ -49,13 +49,10 @@ export class M26Speed {
     else {
       s = '' + ss;
     }
-    var ppm = '' + mm + ':' + s;
-    if (ppm.length > 5) {
-      return ppm.substring(0, 5);
+    if (s.length > 5) {
+      s = s.substring(0, 5);
     }
-    else {
-      return ppm;
-    }
+    return '' + mm + ':' + s;
   }
 
 

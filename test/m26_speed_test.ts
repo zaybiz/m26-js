@@ -25,18 +25,31 @@ describe('Class M26Speed:', () => {
       expect(s.yph()).to.be.closeTo(7040, 0.0000000001);
       expect(s.seconds_per_mile()).to.be.closeTo(900, 0.0000000001);
       expect(s.pace_per_mile()).to.be.eql('15:00');
-
-      //d = new Distance(2.0)
-      //t = new ElapsedTime('30:00')
-      //s = new Speed(d, t)
-      //expect(s.mph()).isWithin(0.000001, 4)
-      //expect(s.kph()).isWithin(0.000001, 6.437376)
-      //expect(s.yph()).isWithin(0.000001, 7040)
-      //expect(s.seconds_per_mile()).isWithin(0.000001, 900)
-      //expect(s.pace_per_mile()).toBe('15:00')
-
       done();
     });
+
+    it('calculates a marathon, with fractional pace_per_mile', (done) => {
+      var d = new M26Distance(26.2);
+      var t = new M26ElapsedTime('3:47:30');
+      var s = new M26Speed(d, t);
+
+      expect(s.mph()).to.be.closeTo(6.90989010989011, 0.0000000001);
+      expect(s.kph()).to.be.closeTo(11.120390189010989, 0.0000000001);
+      expect(s.yph()).to.be.closeTo(12161.4065934066, 0.0000000001);
+      expect(s.seconds_per_mile()).to.be.closeTo(520.992366412214, 0.0000000001);
+      expect(s.pace_per_mile()).to.be.eql('8:40.99');
+      done();
+    });
+
+    //it 'calculates a marathon, with fractional pace_per_mile', ->
+    //d = new Distance(26.2)
+    //t = new ElapsedTime('03:47:30')
+    //s = new Speed(d, t)
+    //expect(s.mph()).isWithin(0.000001, 6.90989010989011)
+    //expect(s.kph()).isWithin(0.000001, 11.120390189010989)
+    //expect(s.yph()).isWithin(0.000001, 12161.4065934066)
+    //expect(s.seconds_per_mile()).isWithin(0.000001, 520.992366412214)
+    //expect(s.pace_per_mile()).toBe('8:40.99')
 
   });
 
