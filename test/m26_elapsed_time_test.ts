@@ -11,32 +11,44 @@ var M26ElapsedTime = m26.M26ElapsedTime;
 
 describe('Class M26ElapsedTime:', () => {
 
-  describe('constructor and conversion', () => {
+  describe('constructors', () => {
 
-    //it('constructor should assume miles', (done) => {
-    //  var d = new M26ElapsedTime(26.2);
-    //  expect(d.value).to.be.closeTo(26.2, 0.0000000001);
-    //  expect(d.as_miles()).to.be.closeTo(26.2, 0.0000000001);
-    //  expect(d.as_kilometers()).to.be.closeTo(42.1648128, 0.0000000001);
-    //  expect(d.as_yards()).to.be.closeTo(46112.0, 0.0000000001);
-    //  done();
-    //});
+    it('constructor with a number of seconds', (done) => {
+      var t = new M26ElapsedTime(3665);
+      expect(t.as_hhmmss()).to.be.eql('01:01:05');
+      expect(t.secs).to.be.closeTo(3665.0, 0.000001);
+      expect(t.hours()).to.be.closeTo(1.0180555555555555, 0.000001);
+      done();
+    });
 
+    it('constructor with a hh:mm:ss string', (done) => {
+      var t = new M26ElapsedTime('3:47:30');
+      expect(t.as_hhmmss()).to.be.eql('03:47:30');
+      expect(t.hh).to.be.closeTo(3,  0.000001);
+      expect(t.mm).to.be.closeTo(47, 0.000001);
+      expect(t.ss).to.be.closeTo(30, 0.000001);
+      done();
+    });
 
-  });
+    it('constructor with a mm:ss string', (done) => {
+      var t = new M26ElapsedTime('01:57');
+      expect(t.as_hhmmss()).to.be.eql('00:01:57');
+      expect(t.hh).to.be.closeTo(0,  0.000001);
+      expect(t.mm).to.be.closeTo(1, 0.000001);
+      expect(t.ss).to.be.closeTo(57, 0.000001);
+      expect(t.secs).to.be.closeTo(117.0, 0.000001);
+      done();
+    });
 
-  describe('add and subtract', () => {
-
-    //it('should add', (done) => {
-    //  var d1 = new M26ElapsedTime(26.2);
-    //  var d2 = new M26ElapsedTime(4.8);
-    //  var d3 = d1.add(d2);
-    //  expect(d3.value).to.be.closeTo(31.0, 0.0000000001);
-    //  expect(d3.as_miles()).to.be.closeTo(31.0, 0.0000000001);
-    //  expect(d3.as_kilometers()).to.be.closeTo(49.889664, 0.0000000001);
-    //  done();
-    //});
-
+    it('constructor with a ss string', (done) => {
+      var t = new M26ElapsedTime('  13  ');
+      expect(t.as_hhmmss()).to.be.eql('00:00:13');
+      expect(t.hh).to.be.closeTo(0,  0.000001);
+      expect(t.mm).to.be.closeTo(0, 0.000001);
+      expect(t.ss).to.be.closeTo(13, 0.000001);
+      expect(t.secs).to.be.closeTo(13.0, 0.000001);
+      done();
+    });
   });
 
 });
