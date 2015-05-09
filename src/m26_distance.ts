@@ -15,9 +15,9 @@ export class M26Distance {
   value : number  = 0;
   uom   : string  = M26Constants.UOM_MILES;
 
-  constructor(num:string, unit:string = M26Constants.UOM_MILES) {
+  constructor(num:number, unit:string = M26Constants.UOM_MILES) {
 
-    this.value = parseFloat(num);
+    this.value = num;
     this.uom   = ('' + unit).trim();
   }
 
@@ -43,7 +43,7 @@ export class M26Distance {
       case M26Constants.UOM_KILOMETERS:
         return this.value;
       case M26Constants.UOM_YARDS:
-        return (this.value / M26Constants.YARDS_PER_MILE) * M26Constants.MILES_PER_KILOMETER;
+        return (this.value / M26Constants.YARDS_PER_MILE) / M26Constants.MILES_PER_KILOMETER;
       default:
         return 0;
     }
@@ -55,7 +55,7 @@ export class M26Distance {
       case M26Constants.UOM_MILES:
         return this.value * M26Constants.YARDS_PER_MILE;
       case M26Constants.UOM_KILOMETERS:
-        return (this.value / M26Constants.MILES_PER_KILOMETER) * M26Constants.YARDS_PER_MILE;
+        return (this.value * M26Constants.MILES_PER_KILOMETER) * M26Constants.YARDS_PER_MILE;
       case M26Constants.UOM_YARDS:
         return this.value;
       default:
@@ -68,10 +68,10 @@ export class M26Distance {
     if (this.populated(another_instance)) {
       var m1 = this.as_miles();
       var m2 = another_instance.as_miles();
-      return new M26Distance('' + (m1 + m2));
+      return new M26Distance(m1 + m2);
     }
     else {
-      return new M26Distance('' + this.as_miles());
+      return new M26Distance(this.as_miles());
     }
   }
 
@@ -80,10 +80,10 @@ export class M26Distance {
     if (this.populated(another_instance)) {
       var m1 = this.as_miles();
       var m2 = another_instance.as_miles();
-      return new M26Distance('' + (m1 - m2));
+      return new M26Distance(m1 - m2);
     }
     else {
-      return new M26Distance('' + this.as_miles());
+      return new M26Distance(this.as_miles());
     }
   }
 

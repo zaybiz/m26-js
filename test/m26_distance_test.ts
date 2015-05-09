@@ -11,53 +11,73 @@ import chai = require('chai');
 import m26  = require('../lib/m26');
 
 var expect = chai.expect;
+var M26Constants = m26.M26Constants;
 var M26Distance  = m26.M26Distance;
 
 describe('Class M26Distance:', () => {
 
-  describe('constructor', () => {
+  describe('constructor and conversion', () => {
 
-    it('constructor should receive a string arg', (done) => {
-      var a = new M26Distance('55.5');
-      expect(a.val()).to.be.closeTo(55.5, 0.0000000001);
+    it('constructor should assume miles', (done) => {
+      var d = new M26Distance(26.2);
+      expect(d.value).to.be.closeTo(26.2, 0.0000000001);
+      expect(d.as_miles()).to.be.closeTo(26.2, 0.0000000001);
+      expect(d.as_kilometers()).to.be.closeTo(42.1648128, 0.0000000001);
+      expect(d.as_yards()).to.be.closeTo(46112.0, 0.0000000001);
       done();
     });
 
-    it('constructor should receive a number arg', (done) => {
-      var a = new M26Distance(39.9);
-      expect(a.val()).to.be.closeTo(39.9, 0.0000000001);
+    it('constructor, with miles', (done) => {
+      var d = new M26Distance(26.2, M26Constants.UOM_MILES);
+      expect(d.value).to.be.closeTo(26.2, 0.0000000001);
+      expect(d.as_miles()).to.be.closeTo(26.2, 0.0000000001);
+      expect(d.as_kilometers()).to.be.closeTo(42.1648128, 0.0000000001);
+      expect(d.as_yards()).to.be.closeTo(46112.0, 0.0000000001);
       done();
     });
 
-    it('constructor should handle null and undefined', (done) => {
-      var n = new M26Distance(null);
-      var u = new M26Distance(undefined);
-      expect(n.val()).to.be.closeTo(0.0, 0.0000000001);
-      expect(u.val()).to.be.closeTo(0.0, 0.0000000001);
+    it('constructor, with kilometers', (done) => {
+      var d = new M26Distance(10.0, M26Constants.UOM_KILOMETERS);
+      expect(d.value).to.be.closeTo(10.0, 0.0000000001);
+      expect(d.as_miles()).to.be.closeTo(6.2137119223733395, 0.0000000001);
+      expect(d.as_kilometers()).to.be.closeTo(10.0, 0.0000000001);
+      expect(d.as_yards()).to.be.closeTo(10936.132983377078, 0.0000000001);
       done();
     });
+
+    it('constructor, with yards', (done) => {
+      var d = new M26Distance(1800.0, M26Constants.UOM_YARDS);
+      expect(d.value).to.be.closeTo(1800.0, 0.0000000001);
+      expect(d.as_miles()).to.be.closeTo(1.0227272727272727, 0.0000000001);
+      expect(d.as_kilometers()).to.be.closeTo(1.64592, 0.0000000001);
+      expect(d.as_yards()).to.be.closeTo(1800.0, 0.0000000001);
+      done();
+    });
+
   });
 
-  describe('adding and subtracting', () => {
+  describe('add and subtract', () => {
 
-    it('should add two ages', (done) => {
-      var a16 = new M26Distance('16.9');
-      var a57 = new M26Distance('57.1');
-      var sum = a57.add(a16);
-      expect(sum).to.be.closeTo(74.0, 0.0000000001);
+    it('should add', (done) => {
+      var d1 = new M26Distance(26.2);
+      var d2 = new M26Distance(4.8);
+      var d3 = d1.add(d2);
+      expect(d3.value).to.be.closeTo(31.0, 0.0000000001);
+      expect(d3.as_miles()).to.be.closeTo(31.0, 0.0000000001);
+      expect(d3.as_kilometers()).to.be.closeTo(49.889664, 0.0000000001);
       done();
     });
 
-    it('should subtract one age from another', (done) => {
-      var a16 = new M26Distance('16.9');
-      var a57 = new M26Distance('57.1');
-      var diff = a57.subtract(a16);
-      expect(diff).to.be.closeTo(40.2, 0.0000000001);
+    it('should subtract', (done) => {
+      var d1 = new M26Distance(31.0);
+      var d2 = new M26Distance(4.8);
+      var d3 = d1.subtract(d2);
+      expect(d3.value).to.be.closeTo(26.2, 0.0000000001);
+      expect(d3.as_miles()).to.be.closeTo(26.2, 0.0000000001);
+      expect(d3.as_kilometers()).to.be.closeTo(42.1648128, 0.0000000001);
       done();
     });
+
   });
-
-
 
 });
-

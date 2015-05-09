@@ -3,7 +3,7 @@
 export declare class M26Distance {
     value: number;
     uom: string;
-    constructor(num: string, unit?: string);
+    constructor(num: number, unit?: string);
     as_miles(): number;
     as_kilometers(): number;
     as_yards(): number;

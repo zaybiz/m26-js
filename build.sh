@@ -7,5 +7,8 @@ tsc -d --module commonjs  src/m26_distance.ts
 tsc -d --module commonjs  src/m26_elapsed_time.ts
 tsc -d --module commonjs  src/m26_speed.ts
 
-echo "ececuting grunt"
-grunt
+echo "executing grunt build"
+grunt build
+
+echo "executing grunt test"
+grunt test

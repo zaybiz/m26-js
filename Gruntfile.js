@@ -86,7 +86,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-typescript');
   grunt.loadNpmTasks('grunt-mocha-istanbul');
 
-  grunt.registerTask('clean_all', [ 'clean:lib', 'clean:src', 'clean:test' ]);
-  grunt.registerTask('default', [ 'clean:lib', 'clean:src', 'clean:test', 'ts:src', 'clean:lib_base', 'concat:dts', 'scrub-dts', 'ts:test', 'mocha_istanbul:coverage' ]);
-  grunt.registerTask('test', [ 'clean:test', 'ts:test', 'mocha_istanbul:coverage' ]);
+  grunt.registerTask('clean_all', [ 'clean:lib', 'clean:src', 'clean:test', 'clean:lib_base' ]);
+  grunt.registerTask('build',     [ 'clean_all', 'ts:src', 'clean:lib_base', 'concat:dts', 'scrub-dts' ]);
+  grunt.registerTask('default',   [ 'clean:lib', 'clean:src', 'clean:test', 'ts:src', 'clean:lib_base', 'concat:dts', 'scrub-dts', 'ts:test', 'mocha_istanbul:coverage' ]);
+  grunt.registerTask('test',      [ 'clean:test', 'ts:test', 'mocha_istanbul:coverage' ]);
 };
