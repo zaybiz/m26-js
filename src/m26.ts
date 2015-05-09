@@ -7,7 +7,6 @@
 /// <reference path="m26_elapsed_time.d.ts" />
 /// <reference path="m26_speed.d.ts" />
 
-import os  = require('os');
 import c   = require('./m26_constants');
 import a   = require('./m26_age');
 import d   = require('./m26_distance');

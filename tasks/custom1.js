@@ -8,15 +8,21 @@ module.exports = function(grunt) {
     console.log('scrub-dts');
     var lines = fs.readFileSync('lib/m26.d.ts', 'utf-8').toString().split("\n");
     var filtered_lines = [];
+    var keep_line = true;
     filtered_lines.push('/// <reference path="../typings/node/node.d.ts" />');
     filtered_lines.push('');
 
     for (i = 0; i < lines.length; i++) {
       var line = lines[i];
+      keep_line = true;
+
       if (line.indexOf('///') >= 0) {
-        // filtered_lines.push('');
+        keep_line = false;
       }
-      else {
+      if (line.indexOf('require(') >= 0) {
+        keep_line = false;
+      }
+      if (keep_line == true) {
         filtered_lines.push(line);
       }
     }
