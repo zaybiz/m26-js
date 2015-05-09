@@ -6,7 +6,7 @@
 import os  = require('os');
 import c   = require('./m26_constants');
 
-var M26Constants = c.M26Constants;
+var M26Constants = c.M26Constants; // OMIT
 
 
 export class M26ElapsedTime {

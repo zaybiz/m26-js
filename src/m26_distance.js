@@ -2,7 +2,7 @@
 /// <reference path="../typings/node/node.d.ts" />
 /// <reference path="m26_constants.d.ts" />
 var c = require('./m26_constants');
-var M26Constants = c.M26Constants;
+var M26Constants = c.M26Constants; // OMIT
 var M26Distance = (function () {
     function M26Distance(num, unit) {
         if (unit === void 0) { unit = M26Constants.UOM_MILES; }

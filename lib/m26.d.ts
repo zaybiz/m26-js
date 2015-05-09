@@ -1,16 +1,5 @@
 /// <reference path="../typings/node/node.d.ts" />
 
-export declare class M26Age {
-    value: number;
-    constructor(n: string);
-    constructor(n: number);
-    val(): number;
-    max_pulse(): number;
-    add(another_instance: M26Age): number;
-    subtract(another_instance: M26Age): number;
-    private populated(obj);
-}
-
 export declare class M26Constants {
     static VERSION: string;
     static UOM_MILES: string;
@@ -24,6 +13,17 @@ export declare class M26Constants {
     static FEET_PER_METER: number;
     static YARDS_PER_MILE: number;
     static SECONDS_PER_HOUR: number;
+}
+
+export declare class M26Age {
+    value: number;
+    constructor(n: string);
+    constructor(n: number);
+    val(): number;
+    max_pulse(): number;
+    add(another_instance: M26Age): number;
+    subtract(another_instance: M26Age): number;
+    private populated(obj);
 }
 
 export declare class M26Distance {
@@ -52,5 +52,8 @@ export declare class M26ElapsedTime {
     private zero_pad(n);
 }
 
+import d = require('./m26_distance');
+import t = require('./m26_elapsed_time');
 export declare class M26Speed {
+    constructor(dist: d.M26Distance, time: t.M26ElapsedTime);
 }

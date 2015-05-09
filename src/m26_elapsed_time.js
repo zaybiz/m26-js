@@ -1,6 +1,6 @@
 // Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 var c = require('./m26_constants');
-var M26Constants = c.M26Constants;
+var M26Constants = c.M26Constants; // OMIT
 var M26ElapsedTime = (function () {
     function M26ElapsedTime(n) {
         // instance variables
