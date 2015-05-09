@@ -34,6 +34,7 @@ describe('Class M26Age:', () => {
     it ('should cast a string to a number', (done) => {
       var a = new M26Age('55.5');
       expect(a.val()).to.be.closeTo(55.5, 0.0000000001);
+      done();
     });
 
   });

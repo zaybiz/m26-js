@@ -39,7 +39,7 @@
     "typescript": "~1.4.1"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "grunt test"
   },
   "keywords": [
     "m26",

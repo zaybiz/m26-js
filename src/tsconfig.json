@@ -13,6 +13,7 @@
         "!./node_modules/**/*.ts"
     ],
     "files": [
+        "./m26.ts",
         "./m26_age.d.ts",
         "./m26_age.ts",
         "./m26_constants.d.ts",
@@ -22,9 +23,7 @@
         "./m26_elapsed_time.d.ts",
         "./m26_elapsed_time.ts",
         "./m26_speed.d.ts",
-        "./m26_speed.ts",
-        "./m26_structs.d.ts",
-        "./m26_structs.ts"
+        "./m26_speed.ts"
     ],
     "compileOnSave": false
 }
