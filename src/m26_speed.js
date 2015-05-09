@@ -10,11 +10,41 @@ var M26Constants = c.M26Constants; // OMIT
 var M26Distance = d.M26Distance; // OMIT
 var M26ElapsedTime = t.M26ElapsedTime; // OMIT
 var M26Speed = (function () {
-    // instance variables
-    //dist   : M26Distance;
-    //time   : M26ElapsedTime;
-    function M26Speed(dist, time) {
+    function M26Speed(dist, etime) {
+        this.dist = dist;
+        this.etime = etime;
     }
+    M26Speed.prototype.mph = function () {
+        return this.dist.as_miles() / this.etime.hours();
+    };
+    M26Speed.prototype.kph = function () {
+        return this.dist.as_kilometers() / this.etime.hours();
+    };
+    M26Speed.prototype.yph = function () {
+        return this.dist.as_yards() / this.etime.hours();
+    };
+    M26Speed.prototype.seconds_per_mile = function () {
+        return this.etime.secs / this.dist.as_miles();
+    };
+    M26Speed.prototype.pace_per_mile = function () {
+        var spm = this.seconds_per_mile();
+        var mm = Math.floor(spm / 60.0);
+        var ss = spm - (mm * 60.0);
+        var s = '';
+        if (ss < 10) {
+            s = '0' + ss;
+        }
+        else {
+            s = '' + ss;
+        }
+        var ppm = '' + mm + ':' + s;
+        if (ppm.length > 5) {
+            return ppm.substring(0, 5);
+        }
+        else {
+            return ppm;
+        }
+    };
     return M26Speed;
 })();
 exports.M26Speed = M26Speed;

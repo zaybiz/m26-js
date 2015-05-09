@@ -53,5 +53,12 @@ export declare class M26ElapsedTime {
 }
 
 export declare class M26Speed {
-    constructor(dist: d.M26Distance, time: t.M26ElapsedTime);
+    dist: d.M26Distance;
+    etime: t.M26ElapsedTime;
+    constructor(dist: d.M26Distance, etime: t.M26ElapsedTime);
+    mph(): number;
+    kph(): number;
+    yph(): number;
+    seconds_per_mile(): number;
+    pace_per_mile(): string;
 }

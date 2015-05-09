@@ -6,21 +6,37 @@ import chai = require('chai');
 import m26  = require('../lib/m26');
 
 var expect = chai.expect;
-var M26Constants = m26.M26Constants;
-var M26Speed     = m26.M26Speed;
+var M26Constants   = m26.M26Constants;
+var M26Distance    = m26.M26Distance;
+var M26ElapsedTime = m26.M26ElapsedTime;
+var M26Speed       = m26.M26Speed;
 
 describe('Class M26Speed:', () => {
 
-  describe('constructor and conversion', () => {
+  describe('construction and calculation', () => {
 
-    //it('constructor should assume miles', (done) => {
-    //  var d = new M26Speed(26.2);
-    //  expect(d.value).to.be.closeTo(26.2, 0.0000000001);
-    //  expect(d.as_miles()).to.be.closeTo(26.2, 0.0000000001);
-    //  expect(d.as_kilometers()).to.be.closeTo(42.1648128, 0.0000000001);
-    //  expect(d.as_yards()).to.be.closeTo(46112.0, 0.0000000001);
-    //  done();
-    //});
+    it('calculates a 2-mile walk, with round numbers', (done) => {
+      var d = new M26Distance(2.0);
+      var t = new M26ElapsedTime('30:00');
+      var s = new M26Speed(d, t);
+
+      expect(s.mph()).to.be.closeTo(4.0, 0.0000000001);
+      expect(s.kph()).to.be.closeTo(6.437376, 0.0000000001);
+      expect(s.yph()).to.be.closeTo(7040, 0.0000000001);
+      expect(s.seconds_per_mile()).to.be.closeTo(900, 0.0000000001);
+      expect(s.pace_per_mile()).to.be.eql('15:00');
+
+      //d = new Distance(2.0)
+      //t = new ElapsedTime('30:00')
+      //s = new Speed(d, t)
+      //expect(s.mph()).isWithin(0.000001, 4)
+      //expect(s.kph()).isWithin(0.000001, 6.437376)
+      //expect(s.yph()).isWithin(0.000001, 7040)
+      //expect(s.seconds_per_mile()).isWithin(0.000001, 900)
+      //expect(s.pace_per_mile()).toBe('15:00')
+
+      done();
+    });
 
   });
 

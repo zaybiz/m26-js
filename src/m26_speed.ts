@@ -15,12 +15,49 @@ var M26ElapsedTime = t.M26ElapsedTime;  // OMIT
 
 export class M26Speed {
 
-  // instance variables
-  //dist   : M26Distance;
-  //time   : M26ElapsedTime;
+  constructor(public dist:d.M26Distance, public etime:t.M26ElapsedTime) { }
 
-  constructor(dist:d.M26Distance, time:t.M26ElapsedTime) {
+  mph() : number {
 
+    return this.dist.as_miles() / this.etime.hours();
   }
+
+  kph() : number {
+
+    return this.dist.as_kilometers() / this.etime.hours();
+  }
+
+  yph() : number {
+
+    return this.dist.as_yards() / this.etime.hours();
+  }
+
+  seconds_per_mile() : number {
+
+    return this.etime.secs / this.dist.as_miles();
+  }
+
+  pace_per_mile() : string {
+    var spm = this.seconds_per_mile();
+    var mm  = Math.floor(spm / 60.0);
+    var ss  = spm - (mm * 60.0);
+    var s   = '';
+
+    if (ss < 10) {
+      s = '0' + ss;
+    }
+    else {
+      s = '' + ss;
+    }
+    var ppm = '' + mm + ':' + s;
+    if (ppm.length > 5) {
+      return ppm.substring(0, 5);
+    }
+    else {
+      return ppm;
+    }
+  }
+
+
 }
 
