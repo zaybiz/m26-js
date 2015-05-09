@@ -2,6 +2,7 @@ var chai = require('chai');
 var m26 = require('../lib/m26');
 var expect = chai.expect;
 var M26Constants = m26.M26Constants;
+var M26Age = m26.M26Age;
 var M26Distance = m26.M26Distance;
 var M26ElapsedTime = m26.M26ElapsedTime;
 var M26Speed = m26.M26Speed;
@@ -30,7 +31,21 @@ describe('Class M26Speed:', function () {
             done();
         });
     });
-    describe('add and subtract', function () {
+    describe('age grading', function () {
+        it('constructor with a number of seconds', function (done) {
+            var d = new M26Distance(26.2);
+            var t = new M26ElapsedTime('3:47:30');
+            var s1 = new M26Speed(d, t);
+            var a1 = new M26Age(42.5);
+            var a2 = new M26Age(43.5);
+            var a3 = new M26Age(57.1);
+            var s2 = s1.age_graded(a1, a2);
+            var s3 = s1.age_graded(a1, a3);
+            expect(s1.mph()).to.be.closeTo(6.90989010989011, 0.0000000001);
+            expect(s2.mph()).to.be.closeTo(6.870961151524531, 0.0000000001);
+            expect(s3.mph()).to.be.closeTo(6.341527317752669, 0.0000000001);
+            done();
+        });
     });
 });
 //# sourceMappingURL=m26_speed_test.js.map

@@ -7,6 +7,7 @@ import m26  = require('../lib/m26');
 
 var expect = chai.expect;
 var M26Constants   = m26.M26Constants;
+var M26Age         = m26.M26Age;
 var M26Distance    = m26.M26Distance;
 var M26ElapsedTime = m26.M26ElapsedTime;
 var M26Speed       = m26.M26Speed;
@@ -41,30 +42,25 @@ describe('Class M26Speed:', () => {
       done();
     });
 
-    //it 'calculates a marathon, with fractional pace_per_mile', ->
-    //d = new Distance(26.2)
-    //t = new ElapsedTime('03:47:30')
-    //s = new Speed(d, t)
-    //expect(s.mph()).isWithin(0.000001, 6.90989010989011)
-    //expect(s.kph()).isWithin(0.000001, 11.120390189010989)
-    //expect(s.yph()).isWithin(0.000001, 12161.4065934066)
-    //expect(s.seconds_per_mile()).isWithin(0.000001, 520.992366412214)
-    //expect(s.pace_per_mile()).toBe('8:40.99')
-
   });
 
-  describe('add and subtract', () => {
+  describe('age grading', () => {
 
-    //it('should add', (done) => {
-    //  var d1 = new M26Speed(26.2);
-    //  var d2 = new M26Speed(4.8);
-    //  var d3 = d1.add(d2);
-    //  expect(d3.value).to.be.closeTo(31.0, 0.0000000001);
-    //  expect(d3.as_miles()).to.be.closeTo(31.0, 0.0000000001);
-    //  expect(d3.as_kilometers()).to.be.closeTo(49.889664, 0.0000000001);
-    //  done();
-    //});
+    it('age-grades a given marathon time to several ages', (done) => {
+      var d  = new M26Distance(26.2);
+      var t  = new M26ElapsedTime('3:47:30');
+      var s1 = new M26Speed(d, t);
+      var a1 = new M26Age(42.5);
+      var a2 = new M26Age(43.5);
+      var a3 = new M26Age(57.1);
+      var s2 = s1.age_graded(a1, a2);
+      var s3 = s1.age_graded(a1, a3);
 
+      expect(s1.mph()).to.be.closeTo(6.90989010989011,  0.0000000001);
+      expect(s2.mph()).to.be.closeTo(6.870961151524531, 0.0000000001);
+      expect(s3.mph()).to.be.closeTo(6.341527317752669, 0.0000000001);
+      done();
+    });
 
   });
 
