@@ -1,4 +1,3 @@
-// Copyright 2015, Christopher Joakim <christopher.joakim@gmail.com>
 var M26Age = (function () {
     function M26Age(n) {
         this.value = 0;
@@ -37,4 +36,3 @@ var M26Age = (function () {
     return M26Age;
 })();
 exports.M26Age = M26Age;
-//# sourceMappingURL=m26_age.js.map

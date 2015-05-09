@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         dest: 'lib/m26.js'
       },
       dts: {
-        src: ['lib/*.d.ts'],
+        src: ['src/*.d.ts'],
         dest: 'lib/m26.d.ts'
       }
     },
@@ -25,8 +25,9 @@ module.exports = function (grunt) {
           { src: ['src/*.ts'], dest: 'lib/m26.js' }
         ],
         options: {
-          fast:   'never',
-          module: 'commonjs'
+          fast:     'never',
+          module:   'commonjs',
+          sourceMap: false
         }
       },
       test : {
@@ -77,13 +78,13 @@ module.exports = function (grunt) {
   };
 
   grunt.initConfig(config);
-  grunt.loadTasks('tasks'); // load custom tasks in the tasks/ directory
+  grunt.loadTasks('tasks'); // load custom tasks in the tasks/ directory, including 'scrub-dts'
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks("grunt-ts");
   grunt.loadNpmTasks('grunt-typescript');
   grunt.loadNpmTasks('grunt-mocha-istanbul');
-  grunt.registerTask('default', [ 'clean:lib', 'clean:src', 'clean:test', 'ts:src', 'concat:lib', 'copy:dts', 'concat:dts', 'scrub-dts' ]);
+  grunt.registerTask('default', [ 'clean:lib', 'clean:src', 'clean:test', 'ts:src', 'concat:lib', 'concat:dts', 'scrub-dts', 'ts:test', 'mocha_istanbul:coverage' ]);
   grunt.registerTask('test', [ 'clean:test', 'ts:test', 'mocha_istanbul:coverage' ]);
 };

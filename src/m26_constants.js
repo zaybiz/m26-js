@@ -1,4 +1,3 @@
-// Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 var M26Constants = (function () {
     function M26Constants() {
     }
@@ -17,4 +16,3 @@ var M26Constants = (function () {
     return M26Constants;
 })();
 exports.M26Constants = M26Constants;
-//# sourceMappingURL=m26_constants.js.map

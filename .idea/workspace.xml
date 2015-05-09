@@ -2,25 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f40438-ce56-47ea-b79f-74b307fbe2ce" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/m26.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/m26.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/lib/m26_age.d.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/lib/m26_constants.d.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/lib/m26_distance.d.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/lib/m26_elapsed_time.d.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/lib/m26_speed.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/m26_structs.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/m26_structs.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/m26_structs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/m26_structs.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/m26_age_test.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sh" afterPath="$PROJECT_DIR$/build.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26.d.ts" afterPath="$PROJECT_DIR$/src/m26.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26.d.txt" afterPath="$PROJECT_DIR$/src/m26.d.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26.ts" afterPath="$PROJECT_DIR$/src/m26.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.js" afterPath="$PROJECT_DIR$/lib/m26.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_age.js.map" afterPath="$PROJECT_DIR$/src/m26_age.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_age.js" afterPath="$PROJECT_DIR$/src/m26_age.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_age_test.js.map" afterPath="$PROJECT_DIR$/test/m26_age_test.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_age_test.ts" afterPath="$PROJECT_DIR$/test/m26_age_test.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_constants.js.map" afterPath="$PROJECT_DIR$/src/m26_constants.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_constants.js" afterPath="$PROJECT_DIR$/src/m26_constants.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_distance.js.map" afterPath="$PROJECT_DIR$/src/m26_distance.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_distance.js" afterPath="$PROJECT_DIR$/src/m26_distance.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_elapsed_time.js.map" afterPath="$PROJECT_DIR$/src/m26_elapsed_time.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_elapsed_time.js" afterPath="$PROJECT_DIR$/src/m26_elapsed_time.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_speed.js.map" afterPath="$PROJECT_DIR$/src/m26_speed.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_speed.js" afterPath="$PROJECT_DIR$/src/m26_speed.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="m26-js.iws" />
@@ -46,7 +45,67 @@
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m26.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/m26.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.68943435">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m26.d.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/m26.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/custom1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m26_age_test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/m26_age_test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m26_distance.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/m26_distance.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.923077">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -56,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/test/m26_age_test.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -66,17 +125,7 @@
         <entry file="file://$PROJECT_DIR$/test-src/m26_age_spec.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m26.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/m26.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.052904565">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,37 +135,7 @@
         <entry file="file://$PROJECT_DIR$/build.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m26.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/m26.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m26.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/m26.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m26.d.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/m26.d.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -152,8 +171,9 @@
         <option value="$PROJECT_DIR$/src/m26.d.txt" />
         <option value="$PROJECT_DIR$/lib/m26.d.ts" />
         <option value="$PROJECT_DIR$/test/m26_age_test.ts" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/src/m26.ts" />
+        <option value="$PROJECT_DIR$/tasks/custom1.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
       </list>
     </option>
   </component>
@@ -252,7 +272,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m26-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m26-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m26-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m26-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -571,14 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018123668">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/m26_elapsed_time.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -595,14 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40560165">
-          <caret line="23" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/m26_age.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1086262">
@@ -611,26 +643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26_distance.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.04">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26.d.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -638,36 +654,20 @@
     <entry file="file://$PROJECT_DIR$/test-src/m26_age_spec.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="42" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/m26_age_test.ts">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.923077">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26.js">
+    <entry file="file://$PROJECT_DIR$/lib/m26.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -675,10 +675,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/m26.ts">
+    <entry file="file://$PROJECT_DIR$/tasks/custom1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.052904565">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/m26_age_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/m26_distance.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/m26_age_test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/m26.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68943435">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>

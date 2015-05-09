@@ -1,1 +1,1 @@
-{"version":3,"file":"m26_speed.js","sourceRoot":"","sources":["m26_speed.ts"],"names":["M26Speed","M26Speed.constructor"],"mappings":"AAAA,4EAA4E;AAO5E;IAAAA;IAGAC,CAACA;IAADD,eAACA;AAADA,CAACA,AAHD,IAGC;AAHY,gBAAQ,WAGpB,CAAA"}
+{"version":3,"file":"m26_speed.js","sourceRoot":"","sources":["m26_speed.ts"],"names":["M26Speed","M26Speed.constructor"],"mappings":"AAOA,IAAa,QAAQ;IAArBA,SAAaA,QAAQA;IAGrBC,CAACA;IAADD,eAACA;AAADA,CAACA,AAHD,IAGC;AAHY,gBAAQ,GAAR,QAGZ,CAAA"}

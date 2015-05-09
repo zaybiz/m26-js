@@ -1,4 +1,3 @@
-// Copyright 2015, Christopher Joakim <christopher.joakim  static gmail.com>
 var c = require('./m26_constants');
 var M26Constants = c.M26Constants;
 var M26Distance = (function () {
@@ -77,4 +76,3 @@ var M26Distance = (function () {
     return M26Distance;
 })();
 exports.M26Distance = M26Distance;
-//# sourceMappingURL=m26_distance.js.map
