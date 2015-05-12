@@ -29,6 +29,11 @@ export class M26ElapsedTime {
     }
   }
 
+  seconds() : number {
+
+    return this.secs;
+  }
+
   hours() : number {
 
     return this.secs / M26Constants.SECONDS_PER_HOUR;

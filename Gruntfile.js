@@ -55,6 +55,14 @@ module.exports = function (grunt) {
       }
     },
 
+    coffee: {
+      compile: {
+        files: {
+          'examples.js':  ['src/examples.coffee']
+        }
+      }
+    },
+
     copy: {
       dts: {
         files: [
@@ -80,6 +88,7 @@ module.exports = function (grunt) {
   grunt.initConfig(config);
   grunt.loadTasks('tasks'); // load custom tasks in the tasks/ directory, including 'scrub-dts'
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks("grunt-ts");
@@ -88,6 +97,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('clean_all', [ 'clean:lib', 'clean:test', 'clean:lib_base' ]);
   grunt.registerTask('build',     [ 'clean_all', 'ts:src', 'clean:lib_base', 'concat:dts', 'scrub-dts' ]);
-  grunt.registerTask('default',   [ 'clean:lib', 'clean:src', 'clean:test', 'ts:src', 'clean:lib_base', 'concat:dts', 'scrub-dts', 'ts:test', 'mocha_istanbul:coverage' ]);
+  grunt.registerTask('default',   [ 'clean:lib', 'clean:src', 'clean:test', 'ts:src', 'clean:lib_base', 'concat:dts', 'scrub-dts', 'coffee', 'ts:test', 'mocha_istanbul:coverage' ]);
   grunt.registerTask('test',      [ 'clean:test', 'ts:test', 'mocha_istanbul:coverage' ]);
 };

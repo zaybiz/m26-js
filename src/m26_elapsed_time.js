@@ -15,6 +15,9 @@ var M26ElapsedTime = (function () {
             this.initialize_from_string(n);
         }
     }
+    M26ElapsedTime.prototype.seconds = function () {
+        return this.secs;
+    };
     M26ElapsedTime.prototype.hours = function () {
         return this.secs / M26Constants.SECONDS_PER_HOUR;
     };

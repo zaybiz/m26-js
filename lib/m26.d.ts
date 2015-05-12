@@ -45,6 +45,7 @@ export declare class M26ElapsedTime {
     secs: number;
     constructor(n: string);
     constructor(n: number);
+    seconds(): number;
     hours(): number;
     as_hhmmss(): string;
     private initialize_from_number(n);

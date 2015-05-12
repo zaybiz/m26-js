@@ -20,5 +20,8 @@ node src/packager.js dts
 
 sed -f dts.sed lib/m26.d.ts.pkg > lib/m26.d.ts
 
+echo "compiling examples.coffee"
+grunt coffee
+
 echo "executing grunt test"
 grunt test
