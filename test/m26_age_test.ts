@@ -69,5 +69,43 @@ describe('Class M26Age:', () => {
     });
   });
 
+  describe('heartbeat/pulse training zones', () => {
+
+    it('should implement training_zones()', (done) => {
+      var a57   = new M26Age('57.1');
+      var zones = a57.training_zones();
+      var z1  = zones[0];
+      var z5  = zones[4];
+      var max = a57.max_pulse();
+      expect(max).to.be.closeTo(162.9, 0.00000001);
+
+      expect(z1['zone']).to.be.eql(1);
+      expect(z1['pulse']).to.be.eql(155);
+      expect(z1['age']).to.be.closeTo(57.1, 0.00000001);
+      expect(z1['pct_max']).to.be.closeTo(0.95, 0.00000001);
+      expect(z1['max']).to.be.closeTo(162.9, 0.00000001);
+
+      expect(z5['zone']).to.be.eql(5);
+      expect(z5['pulse']).to.be.eql(122);
+      expect(z5['age']).to.be.closeTo(57.1, 0.00000001);
+      expect(z5['pct_max']).to.be.closeTo(0.75, 0.00000001);
+      expect(z5['max']).to.be.closeTo(162.9, 0.00000001);
+      done();
+    });
+  });
+
 });
 
+
+
+// expect(z1.zone).toBe(1)
+// expect(z1.pulse).toBe(155)
+// expect(z1.age).isWithin(0.001, 57.1)
+// expect(z1.pct_max).isWithin(0.001, 0.95)
+// expect(z1.max).isWithin(0.001, 162.9)
+//
+// expect(z5.zone).toBe(5)
+// expect(z5.pulse).toBe(122)
+// expect(z5.age).isWithin(0.001, 57.1)
+// expect(z5.pct_max).isWithin(0.001, 0.75)
+// expect(z5.max).isWithin(0.001, 162.9)

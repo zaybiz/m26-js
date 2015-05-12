@@ -2,6 +2,14 @@
 
 /// <reference path="../typings/node/node.d.ts" />
 
+export interface M26TrainingZone {
+  zone    : number;
+  age     : number;
+  max     : number;
+  pct_max : number;
+  pulse   : number;
+}
+
 export class M26Age {
 
   // instance variables
@@ -47,6 +55,39 @@ export class M26Age {
       return this.value - another_instance.value;
     }
   }
+
+  training_zones() : M26TrainingZone[] {
+    var zones  = [ 0.95, 0.90, 0.85, 0.80, 0.75 ];
+    var values = [];
+    var max    = this.max_pulse();
+
+    // {"zone":1,"age":57.1,"max":162.9,"pct_max":0.95,"pulse":155}
+    for (var i = 0; i < zones.length; i++) {
+      var pct = zones[i];
+      var obj = {};
+      obj['zone']    = i + 1;
+      obj['age']     = this.val();
+      obj['max']     = max;
+      obj['pct_max'] = pct;
+      obj['pulse']   = Math.round(max * pct);
+      values.push(obj);
+    }
+    return values;
+  }
+
+  //training_zones: ->
+  //results = []
+  //zones   = [ 0.95, 0.90, 0.85, 0.80, 0.75 ]
+  //max     = this.max_pulse()
+  //for pct, idx in zones
+  //tuple      = {}
+  //tuple.zone = idx + 1
+  //tuple.age  = this.val()
+  //tuple.max  = max
+  //tuple.pct_max = pct
+  //tuple.pulse   = Math.round(max * pct)
+  //results.push(tuple)
+  //results
 
   private populated(obj:any) {
 

@@ -2,7 +2,7 @@
 This purpose of this file is to test the generated m26.js file, outside of jasmine,
 before deployment to npm.  It (accurately) generates Examples section of the README.md
 file based on actual working code and output.
-Copyright 2014, Christopher Joakim, JoakimSoftware LLC <christopher.joakim@gmail.com>
+Copyright 2015, Christopher Joakim, <christopher.joakim@gmail.com>
 ###
 
 m26 = require("./lib/m26.js")
@@ -64,9 +64,9 @@ console.log('a57.max_pulse()   ->  ' + a57.max_pulse())
 console.log('a57.add(a20)      ->  ' + a57.add(a20))
 console.log('a57.subtract(a20) ->  ' + a57.subtract(a20))
 console.log('')
-# zones = a57.training_zones()
-# console.log('zones = a57.training_zones()')
-# console.log('JSON.stringify(zones) -> ' + JSON.stringify(zones))
+zones = a57.training_zones()
+console.log('zones = a57.training_zones()')
+console.log('JSON.stringify(zones) -> ' + JSON.stringify(zones))
 console.log('```')
 console.log('')
 
