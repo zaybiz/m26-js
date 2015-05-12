@@ -142,7 +142,7 @@ s2.mph()  -> 5.770789859154929
 
 ### Release History
 
-* 2015-05-12 - v0.3.1 - Repackaged.
+* 2015-05-12 - v0.3.1 - Renamed lib from m26.js to m26-js.js, etc, and repackaged.
 * 2015-05-12 - v0.3.0 - Project ported from CoffeeScript to Typescript, with m26.d.ts typings file.
 * 2014-11-09 - v0.2.0 - Corrected the English-to-Metric and Metric-to-English conversions.
 * 2014-11-06 - v0.1.5 - Fix require statement in examples documentation.
