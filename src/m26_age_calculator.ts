@@ -45,17 +45,6 @@ export class M26AgeCalculator {
     }
   }
 
-  //if birth_yyyy_mm_dd
-  //bdate = new Date(birth_yyyy_mm_dd)
-  //if as_of_yyyy_mm_dd
-  //adate = new Date(as_of_yyyy_mm_dd)
-  //else
-  //adate = new Date()
-  //
-  //ms_diff = adate - bdate # elapsed time in milliseconds, like 1722629039587
-  //new Age(ms_diff / @milliseconds_per_year())
-
-
   private populated(obj:any) {
 
     if (obj === undefined) {

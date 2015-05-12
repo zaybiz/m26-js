@@ -12,6 +12,9 @@ var Packager = (function () {
             case 'dts':
                 this.package_dts();
                 break;
+            case 'ts':
+                this.package_ts();
+                break;
         }
     };
     Packager.prototype.package_js = function () {
@@ -27,7 +30,6 @@ var Packager = (function () {
             var lines = this.read_lines(infile);
             for (var l = 0; l < lines.length; l++) {
                 var line = lines[l];
-                var keep = true;
                 if (this.omit_js_line(line)) {
                 }
                 else {
@@ -49,7 +51,6 @@ var Packager = (function () {
             var lines = this.read_lines(infile);
             for (var l = 0; l < lines.length; l++) {
                 var line = lines[l];
-                var keep = true;
                 if (this.omit_dts_line(line)) {
                 }
                 else {
@@ -58,6 +59,29 @@ var Packager = (function () {
             }
         }
         this.write_file('lib/m26-js.d.ts.pkg', all_lines);
+    };
+    Packager.prototype.package_ts = function () {
+        console.log('Packager.package_ts');
+        var all_lines = [];
+        all_lines.push('/// <reference path="../typings/node/node.d.ts" />');
+        var ts_files = this.ts_files();
+        for (var i = 0; i < ts_files.length; i++) {
+            var infile = ts_files[i];
+            all_lines.push('');
+            all_lines.push('// file: ' + infile);
+            all_lines.push('');
+            console.log('processing file: ' + infile);
+            var lines = this.read_lines(infile);
+            for (var l = 0; l < lines.length; l++) {
+                var line = lines[l];
+                if (this.omit_ts_line(line)) {
+                }
+                else {
+                    all_lines.push(line);
+                }
+            }
+        }
+        this.write_file('m26-js.ts', all_lines);
     };
     Packager.prototype.js_files = function () {
         var list = [];
@@ -72,6 +96,14 @@ var Packager = (function () {
         var mods = this.sub_modules();
         for (var i = 0; i < mods.length; i++) {
             list.push('src/' + mods[i] + '.d.ts');
+        }
+        return list;
+    };
+    Packager.prototype.ts_files = function () {
+        var list = [];
+        var mods = this.sub_modules();
+        for (var i = 0; i < mods.length; i++) {
+            list.push('src/' + mods[i] + '.ts');
         }
         return list;
     };
@@ -105,6 +137,25 @@ var Packager = (function () {
             return true;
         }
         if (line.indexOf('require(') > 0) {
+            return true;
+        }
+        return false;
+    };
+    Packager.prototype.omit_ts_line = function (line) {
+        var trimmed = line.trim();
+        if (trimmed.length < 1) {
+            return true;
+        }
+        if (trimmed.indexOf('///') == 0) {
+            return true;
+        }
+        if (trimmed.indexOf('require(') > 0) {
+            return true;
+        }
+        if (trimmed.indexOf('Copyright') > 0) {
+            return true;
+        }
+        if (trimmed.indexOf('var M26') == 0) {
             return true;
         }
         return false;

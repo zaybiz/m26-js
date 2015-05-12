@@ -1,6 +1,3 @@
-/// <reference path="../typings/mocha/mocha.d.ts" />
-/// <reference path="../typings/chai/chai.d.ts" />
-/// <reference path="../lib/m26-js.d.ts" />
 var chai = require('chai');
 var m26 = require('../lib/m26-js');
 var expect = chai.expect;
@@ -43,3 +40,4 @@ describe('Class M26ElapsedTime:', function () {
         });
     });
 });
+//# sourceMappingURL=m26_elapsed_time_test.js.map

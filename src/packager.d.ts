@@ -5,11 +5,14 @@ export declare class Packager {
     execute(): void;
     package_js(): void;
     package_dts(): void;
+    package_ts(): void;
     js_files(): string[];
     dts_files(): string[];
+    ts_files(): string[];
     sub_modules(): string[];
     omit_js_line(line: string): boolean;
     omit_dts_line(line: string): boolean;
+    omit_ts_line(line: string): boolean;
     read_lines(infile: string): string[];
     write_file(outfile: string, lines: string[]): void;
 }

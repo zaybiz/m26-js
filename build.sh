@@ -18,6 +18,7 @@ tsc -d --module commonjs  src/m26_speed.ts
 
 node src/packager.js js
 node src/packager.js dts
+node src/packager.js ts
 
 sed -f dts.sed lib/m26-js.d.ts.pkg > lib/m26-js.d.ts
 
