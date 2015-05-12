@@ -34,6 +34,13 @@ export declare class M26Age {
     private populated(obj);
 }
 
+export declare class M26AgeCalculator {
+    constructor();
+    milliseconds_per_year(): number;
+    calculate(birth_yyyy_mm_dd: string, as_of_yyyy_mm_dd: string): M26Age;
+    private populated(obj);
+}
+
 export declare class M26Distance {
     value: number;
     uom: string;

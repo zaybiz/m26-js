@@ -95,17 +95,3 @@ describe('Class M26Age:', () => {
   });
 
 });
-
-
-
-// expect(z1.zone).toBe(1)
-// expect(z1.pulse).toBe(155)
-// expect(z1.age).isWithin(0.001, 57.1)
-// expect(z1.pct_max).isWithin(0.001, 0.95)
-// expect(z1.max).isWithin(0.001, 162.9)
-//
-// expect(z5.zone).toBe(5)
-// expect(z5.pulse).toBe(122)
-// expect(z5.age).isWithin(0.001, 57.1)
-// expect(z5.pct_max).isWithin(0.001, 0.75)
-// expect(z5.max).isWithin(0.001, 162.9)

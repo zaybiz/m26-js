@@ -79,6 +79,7 @@ var Packager = (function () {
         var list = [];
         list.push('m26_constants');
         list.push('m26_age');
+        list.push('m26_age_calculator');
         list.push('m26_distance');
         list.push('m26_elapsed_time');
         list.push('m26_speed');

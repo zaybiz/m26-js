@@ -95,6 +95,7 @@ export class Packager {
     var list = [];
     list.push('m26_constants');
     list.push('m26_age');
+    list.push('m26_age_calculator');
     list.push('m26_distance');
     list.push('m26_elapsed_time');
     list.push('m26_speed');
@@ -142,4 +143,3 @@ export class Packager {
 var f = process.argv[2];
 var p = new Packager(f);
 p.execute();
-

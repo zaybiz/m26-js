@@ -11,6 +11,7 @@ echo "shell compiles ..."
 tsc -d --module commonjs  src/packager.ts
 tsc -d --module commonjs  src/m26_constants.ts
 tsc -d --module commonjs  src/m26_age.ts
+tsc -d --module commonjs  src/m26_age_calculator.ts
 tsc -d --module commonjs  src/m26_distance.ts
 tsc -d --module commonjs  src/m26_elapsed_time.ts
 tsc -d --module commonjs  src/m26_speed.ts

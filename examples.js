@@ -7,7 +7,7 @@ Copyright 2015, Christopher Joakim, <christopher.joakim@gmail.com>
  */
 
 (function() {
-  var a1, a2, a20, a21, a57, d, d1, d2, d3, d4, d5, m26, s, s2, t, t1, t2, zones;
+  var a0, a1, a2, a20, a21, a57, c, d, d1, d2, d3, d4, d5, m26, s, s2, t, t1, t2, zones;
 
   m26 = require("./lib/m26.js");
 
@@ -126,6 +126,36 @@ Copyright 2015, Christopher Joakim, <christopher.joakim@gmail.com>
   console.log('zones = a57.training_zones()');
 
   console.log('JSON.stringify(zones) -> ' + JSON.stringify(zones));
+
+  console.log('```');
+
+  console.log('');
+
+  console.log('#### M26AgeCalculator');
+
+  console.log('');
+
+  console.log('Calculate and return an M26Age object, given a birth date, and optional as-of date.');
+
+  console.log('');
+
+  c = new m26.M26AgeCalculator();
+
+  a0 = c.calculate("2014-10-01", "2014-11-01");
+
+  a1 = c.calculate("1960-10-01", "2014-11-01");
+
+  console.log('```');
+
+  console.log('c  = new m26.M26AgeCalculator()');
+
+  console.log('a0 = c.calculate("2014-10-01", "2014-11-01")');
+
+  console.log('a1 = c.calculate("1960-10-01", "2014-11-01")');
+
+  console.log('a0.val()  ->  ' + a0.val());
+
+  console.log('a1.val()  ->  ' + a1.val());
 
   console.log('```');
 
