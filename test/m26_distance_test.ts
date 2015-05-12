@@ -1,9 +1,9 @@
 /// <reference path="../typings/mocha/mocha.d.ts" />
 /// <reference path="../typings/chai/chai.d.ts" />
-/// <reference path="../lib/m26.d.ts" />
+/// <reference path="../lib/m26-js.d.ts" />
 
 import chai = require('chai');
-import m26  = require('../lib/m26');
+import m26  = require('../lib/m26-js');
 
 var expect = chai.expect;
 var M26Constants = m26.M26Constants;

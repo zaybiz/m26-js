@@ -9,7 +9,7 @@ Copyright 2015, Christopher Joakim, <christopher.joakim@gmail.com>
 (function() {
   var a0, a1, a2, a20, a21, a57, c, d, d1, d2, d3, d4, d5, m26, s, s2, t, t1, t2, zones;
 
-  m26 = require("./lib/m26.js");
+  m26 = require("./lib/m26-js.js");
 
   console.log('');
 

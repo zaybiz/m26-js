@@ -13,9 +13,10 @@
         "!./node_modules/**/*.ts"
     ],
     "files": [
-        "./m26.ts",
         "./m26_age.d.ts",
         "./m26_age.ts",
+        "./m26_age_calculator.d.ts",
+        "./m26_age_calculator.ts",
         "./m26_constants.d.ts",
         "./m26_constants.ts",
         "./m26_distance.d.ts",
@@ -23,7 +24,9 @@
         "./m26_elapsed_time.d.ts",
         "./m26_elapsed_time.ts",
         "./m26_speed.d.ts",
-        "./m26_speed.ts"
+        "./m26_speed.ts",
+        "./packager.d.ts",
+        "./packager.ts"
     ],
     "compileOnSave": false
 }

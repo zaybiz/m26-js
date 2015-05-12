@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f40438-ce56-47ea-b79f-74b307fbe2ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DEVNOTES.txt" afterPath="$PROJECT_DIR$/DEVNOTES.txt" />
     </list>
     <ignored path="m26-js.iws" />
     <ignored path=".idea/workspace.xml" />

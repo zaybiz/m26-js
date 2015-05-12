@@ -13,6 +13,10 @@
         "!./node_modules/**/*.ts"
     ],
     "files": [
-        "./m26_age_test.ts"
+        "./m26_age_calculator_test.ts",
+        "./m26_age_test.ts",
+        "./m26_distance_test.ts",
+        "./m26_elapsed_time_test.ts",
+        "./m26_speed_test.ts"
     ]
 }

@@ -19,7 +19,7 @@ tsc -d --module commonjs  src/m26_speed.ts
 node src/packager.js js
 node src/packager.js dts
 
-sed -f dts.sed lib/m26.d.ts.pkg > lib/m26.d.ts
+sed -f dts.sed lib/m26-js.d.ts.pkg > lib/m26-js.d.ts
 
 echo "compiling examples.coffee"
 grunt coffee

@@ -5,7 +5,7 @@ file based on actual working code and output.
 Copyright 2015, Christopher Joakim, <christopher.joakim@gmail.com>
 ###
 
-m26 = require("./lib/m26.js")
+m26 = require("./lib/m26-js.js")
 
 console.log('')
 console.log('### Examples')

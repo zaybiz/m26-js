@@ -25,7 +25,7 @@ Note: this library is now implemented with TypeScript, but these examples are in
 
 m26-js defines the following:
 ```
-m26.M26Constants.VERSION:             0.3.0
+m26.M26Constants.VERSION:             0.3.1
 m26.M26Constants.UOM_MILES:           m
 m26.M26Constants.UOM_KILOMETERS:      k
 m26.M26Constants.UOM_YARDS:           y
@@ -142,6 +142,7 @@ s2.mph()  -> 5.770789859154929
 
 ### Release History
 
+* 2015-05-12 - v0.3.1 - Repackaged.
 * 2015-05-12 - v0.3.0 - Project ported from CoffeeScript to Typescript, with m26.d.ts typings file.
 * 2014-11-09 - v0.2.0 - Corrected the English-to-Metric and Metric-to-English conversions.
 * 2014-11-06 - v0.1.5 - Fix require statement in examples documentation.

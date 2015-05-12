@@ -1,9 +1,9 @@
 {
   "name":    "m26-js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A Node.js library for speed and pace calculations for sports like running and cycling. Age-graded times and heart-rate training-zones are also supported.",
   "homepage": "https://github.com/cjoakim/m26-js",
-  "main": "lib/m26.js",
+  "main": "lib/m26-js.js",
   "author": {
     "name": "Chris Joakim",
     "url":  "http://www.chrisjoakim.com"
@@ -44,7 +44,8 @@
     "README.md",
     "package.json",
     "examples.js",
-    "lib/"
+    "lib/",
+    "node_modules/"
   ],
   "scripts": {
     "test": "grunt test"

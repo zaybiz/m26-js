@@ -45,7 +45,7 @@ export class Packager {
         }
       }
     }
-    this.write_file('lib/m26.js', all_lines);
+    this.write_file('lib/m26-js.js', all_lines);
   }
 
   package_dts() : void {
@@ -70,7 +70,7 @@ export class Packager {
         }
       }
     }
-    this.write_file('lib/m26.d.ts.pkg', all_lines);
+    this.write_file('lib/m26-js.d.ts.pkg', all_lines);
   }
 
   js_files() : string[] {
