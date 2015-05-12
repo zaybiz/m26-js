@@ -41,7 +41,7 @@ Copyright 2015, Christopher Joakim, <christopher.joakim@gmail.com>
 
   console.log('');
 
-  console.log('Note: this library is implemented with CoffeeScript, and these examples are also in CoffeeScript.');
+  console.log('Note: this library is now implemented with TypeScript, but these examples are in CoffeeScript.');
 
   console.log('');
 
