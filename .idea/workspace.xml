@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39f40438-ce56-47ea-b79f-74b307fbe2ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sh" afterPath="$PROJECT_DIR$/build.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples.coffee" afterPath="$PROJECT_DIR$/src/examples.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples.js" afterPath="$PROJECT_DIR$/examples.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.d.ts.pkg" afterPath="$PROJECT_DIR$/lib/m26.d.ts.pkg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.d.ts" afterPath="$PROJECT_DIR$/lib/m26.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26.js" afterPath="$PROJECT_DIR$/lib/m26.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/m26_age_test.ts" afterPath="$PROJECT_DIR$/test/m26_age_test.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packager.js" afterPath="$PROJECT_DIR$/src/packager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packager.ts" afterPath="$PROJECT_DIR$/src/packager.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="39f40438-ce56-47ea-b79f-74b307fbe2ce" name="Default" comment="" />
     <ignored path="m26-js.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
