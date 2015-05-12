@@ -2,6 +2,12 @@
 logs
 *.log
 
+
+m26.ts.pkg
+lib/m26-js.d.ts.pkg
+
+
+
 *.tgz
 
 # Runtime data

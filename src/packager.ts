@@ -97,7 +97,7 @@ export class Packager {
         }
       }
     }
-    this.write_file('m26-js.ts', all_lines);
+    this.write_file('m26.ts.pkg', all_lines);
   }
 
   js_files() : string[] {

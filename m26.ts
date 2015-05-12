@@ -98,7 +98,7 @@ export class M26AgeCalculator {
   milliseconds_per_year() : number {
     return 31557600000; // value is: 1000 * 60 * 60 * 24 * 365.25
   }
-  calculate(birth_yyyy_mm_dd : string, as_of_yyyy_mm_dd : string) : a.M26Age {
+  calculate(birth_yyyy_mm_dd : string, as_of_yyyy_mm_dd : string) : M26Age {
     var age = new M26Age(-1);
     var birth_date = null;
     var as_of_date = null;
@@ -274,7 +274,7 @@ export class M26ElapsedTime {
 // file: src/m26_speed.ts
 
 export class M26Speed {
-  constructor(public dist:d.M26Distance, public etime:t.M26ElapsedTime) {
+  constructor(public dist:M26Distance, public etime:M26ElapsedTime) {
   }
   mph():number {
     return this.dist.as_miles() / this.etime.hours();
@@ -304,14 +304,14 @@ export class M26Speed {
     }
     return '' + mm + ':' + s;
   }
-  age_graded(event_age:a.M26Age, graded_age:a.M26Age):M26Speed {
+  age_graded(event_age:M26Age, graded_age:M26Age):M26Speed {
     var ag_factor = event_age.max_pulse() / graded_age.max_pulse();
     var event_secs = this.etime.secs;
     var graded_secs = event_secs * ag_factor;
     var graded_etime = new M26ElapsedTime(graded_secs);
     return new M26Speed(this.dist, graded_etime);
   }
-  projected_time(another_distance:d.M26Distance, algorithm = 'simple'):string {
+  projected_time(another_distance:M26Distance, algorithm = 'simple'):string {
     if (algorithm == 'riegel') {
       var t1 = this.etime.secs;
       var d1 = this.dist.as_miles();
