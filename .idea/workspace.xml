@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f40438-ce56-47ea-b79f-74b307fbe2ce" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sh" afterPath="$PROJECT_DIR$/build.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26-js.d.ts" afterPath="$PROJECT_DIR$/lib/m26-js.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/m26-js.js" afterPath="$PROJECT_DIR$/lib/m26-js.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_age.d.ts" afterPath="$PROJECT_DIR$/src/m26_age.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_age.js" afterPath="$PROJECT_DIR$/src/m26_age.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_age.ts" afterPath="$PROJECT_DIR$/src/m26_age.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_constants.js" afterPath="$PROJECT_DIR$/src/m26_constants.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/m26_constants.ts" afterPath="$PROJECT_DIR$/src/m26_constants.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packager.js" afterPath="$PROJECT_DIR$/src/packager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packager.ts" afterPath="$PROJECT_DIR$/src/packager.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="m26-js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,21 +33,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="m26_constants.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="m26_constants.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/m26_constants.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11420345">
+            <state vertical-scroll-proportion="0.0">
               <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.18405512">
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -148,8 +136,8 @@
         <option value="$PROJECT_DIR$/src/packager.ts" />
         <option value="$PROJECT_DIR$/build.sh" />
         <option value="$PROJECT_DIR$/src/m26_constants.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/m26_age.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -527,13 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dts.sed">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03526971">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/examples.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14139344">
@@ -692,14 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/m26_age.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-31.925926">
@@ -710,8 +683,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/m26_constants.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11420345">
+        <state vertical-scroll-proportion="0.0">
           <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18405512">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding />
         </state>
       </provider>
