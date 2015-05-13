@@ -143,6 +143,88 @@ s2.mph()  -> 5.770789859154929
 ### Test Results
 
 ```
+Running "mocha_istanbul:coverage" (mocha_istanbul) task
+
+
+  Class M26AgeCalculator:
+    constants
+      ✓ should implement milliseconds_per_year()
+    calculation
+      ✓ should implement calculate()
+
+  Class M26Age:
+    constructor
+      ✓ constructor should receive a string arg
+      ✓ constructor should receive a number arg
+      ✓ constructor should handle null and undefined
+    adding and subtracting
+      ✓ should add two ages
+      ✓ should subtract one age from another
+    max pulse calculation
+      ✓ should implement max_pulse()
+    heartbeat/pulse training zones
+      ✓ should implement training_zones()
+
+  Class M26Constants:
+    version
+      ✓ defines VERSION
+      ✓ VERSION matches package.json version
+    units of measure
+      ✓ defines UOM_MILES
+      ✓ defines UOM_KILOMETERS
+      ✓ defines UOM_YARDS
+      ✓ defines UNITS_OF_MEASURE
+    unit conversion values
+      ✓ defines KILOMETERS_PER_MILE
+      ✓ defines MILES_PER_KILOMETER
+      ✓ defines YARDS_PER_KILOMETER
+      ✓ defines FEET_PER_KILOMETER
+      ✓ defines FEET_PER_METER
+      ✓ defines YARDS_PER_MILE
+      ✓ defines SECONDS_PER_HOUR
+
+  Class M26Distance:
+    constructor and conversion
+      ✓ constructor should assume miles
+      ✓ constructor should be coerced to miles
+      ✓ constructor, with miles
+      ✓ constructor, with kilometers
+      ✓ constructor, with yards
+    add and subtract
+      ✓ should add
+      ✓ should subtract
+
+  Class M26ElapsedTime:
+    constructors
+      ✓ constructor with a number of seconds
+      ✓ constructor with a hh:mm:ss string
+      ✓ constructor with a mm:ss string
+      ✓ constructor with a ss string
+
+  Class M26Speed:
+    construction and calculation
+      ✓ calculates a 2-mile walk, with round numbers
+      ✓ calculates a marathon, with fractional pace_per_mile
+    age grading
+      ✓ age-grades a given marathon time to several ages
+    time projection
+      ✓ projected_time using a simple linear formula
+      ✓ projected_time using the exponential riegel formula
+
+
+  38 passing (28ms)
+
+=============================================================================
+Writing coverage object [/Users/cjoakim/github/m26-js/coverage/coverage.json]
+Writing coverage reports at [/Users/cjoakim/github/m26-js/coverage]
+=============================================================================
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 210/210 )
+Branches     : 97.14% ( 68/70 )
+Functions    : 97.44% ( 38/39 )
+Lines        : 100% ( 208/208 )
+================================================================================
 
 ```
 
