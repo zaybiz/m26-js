@@ -17,6 +17,18 @@ export class M26Distance {
 
     this.value = num;
     this.uom   = ('' + unit).trim();
+
+    // if necessary, coerce the uom into a valid default value.
+    switch (this.uom) {
+      case M26Constants.UOM_MILES:
+        break;
+      case M26Constants.UOM_KILOMETERS:
+        break;
+      case M26Constants.UOM_YARDS:
+        break;
+      default:
+        this.uom = M26Constants.UOM_MILES;
+    }
   }
 
   as_miles():number {
@@ -28,8 +40,6 @@ export class M26Distance {
         return this.value / M26Constants.KILOMETERS_PER_MILE;
       case M26Constants.UOM_YARDS:
         return this.value / M26Constants.YARDS_PER_MILE;
-      default:
-        return 0;
     }
   }
 
@@ -42,8 +52,6 @@ export class M26Distance {
         return this.value;
       case M26Constants.UOM_YARDS:
         return (this.value / M26Constants.YARDS_PER_MILE) / M26Constants.MILES_PER_KILOMETER;
-      default:
-        return 0;
     }
   }
 
@@ -56,8 +64,6 @@ export class M26Distance {
         return (this.value * M26Constants.MILES_PER_KILOMETER) * M26Constants.YARDS_PER_MILE;
       case M26Constants.UOM_YARDS:
         return this.value;
-      default:
-        return 0;
     }
   }
 

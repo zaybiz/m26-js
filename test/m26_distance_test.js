@@ -13,6 +13,13 @@ describe('Class M26Distance:', function () {
             expect(d.as_yards()).to.be.closeTo(46112.0, 0.0000000001);
             done();
         });
+        it('constructor should be coerced to miles', function (done) {
+            var d = new M26Distance(99, 'parsec');
+            expect(d.value).to.be.closeTo(99.0, 0.0000000001);
+            expect(d.as_miles()).to.be.closeTo(99.0, 0.0000000001);
+            expect(d.uom).to.be.eql(M26Constants.UOM_MILES);
+            done();
+        });
         it('constructor, with miles', function (done) {
             var d = new M26Distance(26.2, M26Constants.UOM_MILES);
             expect(d.value).to.be.closeTo(26.2, 0.0000000001);
@@ -43,18 +50,22 @@ describe('Class M26Distance:', function () {
             var d1 = new M26Distance(26.2);
             var d2 = new M26Distance(4.8);
             var d3 = d1.add(d2);
+            var d4 = d1.add(null);
             expect(d3.value).to.be.closeTo(31.0, 0.0000000001);
             expect(d3.as_miles()).to.be.closeTo(31.0, 0.0000000001);
             expect(d3.as_kilometers()).to.be.closeTo(49.889664, 0.0000000001);
+            expect(d4.value).to.be.closeTo(26.2, 0.0000000001);
             done();
         });
         it('should subtract', function (done) {
             var d1 = new M26Distance(31.0);
             var d2 = new M26Distance(4.8);
             var d3 = d1.subtract(d2);
+            var d4 = d1.subtract(undefined);
             expect(d3.value).to.be.closeTo(26.2, 0.0000000001);
             expect(d3.as_miles()).to.be.closeTo(26.2, 0.0000000001);
             expect(d3.as_kilometers()).to.be.closeTo(42.1648128, 0.0000000001);
+            expect(d4.value).to.be.closeTo(31.0, 0.0000000001);
             done();
         });
     });

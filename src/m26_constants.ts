@@ -10,7 +10,7 @@ export class M26Constants {
   static UOM_KILOMETERS   : string = 'k';
   static UOM_YARDS        : string = 'y';
 
-  static UNITS_OF_MEASURE : string[] = [M26Constants.UOM_MILES, M26Constants.UOM_KILOMETERS, M26Constants.UOM_YARDS];
+  static UNITS_OF_MEASURE : string[] = [ M26Constants.UOM_MILES, M26Constants.UOM_KILOMETERS, M26Constants.UOM_YARDS ];
 
   static KILOMETERS_PER_MILE : number = 1.609344;
   static MILES_PER_KILOMETER : number = 0.621371192237334;

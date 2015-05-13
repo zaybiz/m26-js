@@ -25,7 +25,7 @@ Note: this library is now implemented with TypeScript, but these examples are in
 
 m26-js defines the following:
 ```
-m26.M26Constants.VERSION:             0.3.1
+m26.M26Constants.VERSION:             0.3.2
 m26.M26Constants.UOM_MILES:           m
 m26.M26Constants.UOM_KILOMETERS:      k
 m26.M26Constants.UOM_YARDS:           y
@@ -140,8 +140,15 @@ s.mph()   -> 6.287999999999999
 s2.mph()  -> 5.770789859154929
 ```
 
+### Test Results
+
+```
+
+```
+
 ### Release History
 
+* 2015-05-13 - v0.3.2 - Repackaged again, from a single merged m26-js.ts file.  Tests enhanced.
 * 2015-05-12 - v0.3.1 - Renamed lib from m26.js to m26-js.js, etc, and repackaged.
 * 2015-05-12 - v0.3.0 - Project ported from CoffeeScript to Typescript, with m26.d.ts typings file.
 * 2014-11-09 - v0.2.0 - Corrected the English-to-Metric and Metric-to-English conversions.

@@ -11,6 +11,16 @@ var M26Distance = (function () {
         this.uom = M26Constants.UOM_MILES;
         this.value = num;
         this.uom = ('' + unit).trim();
+        switch (this.uom) {
+            case M26Constants.UOM_MILES:
+                break;
+            case M26Constants.UOM_KILOMETERS:
+                break;
+            case M26Constants.UOM_YARDS:
+                break;
+            default:
+                this.uom = M26Constants.UOM_MILES;
+        }
     }
     M26Distance.prototype.as_miles = function () {
         switch (this.uom) {
@@ -20,8 +30,6 @@ var M26Distance = (function () {
                 return this.value / M26Constants.KILOMETERS_PER_MILE;
             case M26Constants.UOM_YARDS:
                 return this.value / M26Constants.YARDS_PER_MILE;
-            default:
-                return 0;
         }
     };
     M26Distance.prototype.as_kilometers = function () {
@@ -32,8 +40,6 @@ var M26Distance = (function () {
                 return this.value;
             case M26Constants.UOM_YARDS:
                 return (this.value / M26Constants.YARDS_PER_MILE) / M26Constants.MILES_PER_KILOMETER;
-            default:
-                return 0;
         }
     };
     M26Distance.prototype.as_yards = function () {
@@ -44,8 +50,6 @@ var M26Distance = (function () {
                 return (this.value * M26Constants.MILES_PER_KILOMETER) * M26Constants.YARDS_PER_MILE;
             case M26Constants.UOM_YARDS:
                 return this.value;
-            default:
-                return 0;
         }
     };
     M26Distance.prototype.add = function (another_instance) {

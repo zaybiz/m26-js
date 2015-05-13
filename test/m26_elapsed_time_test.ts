@@ -18,6 +18,7 @@ describe('Class M26ElapsedTime:', () => {
       expect(t.as_hhmmss()).to.be.eql('01:01:05');
       expect(t.secs).to.be.closeTo(3665.0, 0.000001);
       expect(t.hours()).to.be.closeTo(1.0180555555555555, 0.000001);
+      expect(t.seconds()).to.be.closeTo(3665.0, 0.000001);
       done();
     });
 
