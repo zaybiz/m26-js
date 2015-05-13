@@ -14,7 +14,6 @@
     ],
     "files": [
         "./lib/m26-js.d.ts",
-        "./m26-js.ts",
         "./m26.ts",
         "./src/m26_age.d.ts",
         "./src/m26_age.ts",

@@ -75,15 +75,4 @@ export class M26Age {
     return values;
   }
 
-  private populated(obj:any) {
-
-    if (obj === undefined) {
-      return false;
-    }
-    if (obj === null) {
-      return false;
-    }
-    return true;
-  }
-
 }

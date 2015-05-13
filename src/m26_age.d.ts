@@ -15,5 +15,4 @@ export declare class M26Age {
     add(another_instance: M26Age): number;
     subtract(another_instance: M26Age): number;
     training_zones(): M26TrainingZone[];
-    private populated(obj);
 }

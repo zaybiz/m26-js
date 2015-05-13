@@ -4,7 +4,7 @@ var M26Constants = (function () {
     function M26Constants() {
     }
     // class variables
-    M26Constants.VERSION = '0.3.0';
+    M26Constants.VERSION = '0.3.2';
     M26Constants.UOM_MILES = 'm';
     M26Constants.UOM_KILOMETERS = 'k';
     M26Constants.UOM_YARDS = 'y';

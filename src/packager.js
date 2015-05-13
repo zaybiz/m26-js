@@ -58,7 +58,7 @@ var Packager = (function () {
                 }
             }
         }
-        this.write_file('lib/m26-js.d.ts.pkg', all_lines);
+        this.write_file('lib/m26-js.d.ts.txt', all_lines);
     };
     Packager.prototype.package_ts = function () {
         console.log('Packager.package_ts');
@@ -81,7 +81,7 @@ var Packager = (function () {
                 }
             }
         }
-        this.write_file('m26.ts.pkg', all_lines);
+        this.write_file('src/m26-js.ts.txt', all_lines);
     };
     Packager.prototype.js_files = function () {
         var list = [];

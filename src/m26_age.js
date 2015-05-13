@@ -48,15 +48,6 @@ var M26Age = (function () {
         }
         return values;
     };
-    M26Age.prototype.populated = function (obj) {
-        if (obj === undefined) {
-            return false;
-        }
-        if (obj === null) {
-            return false;
-        }
-        return true;
-    };
     return M26Age;
 })();
 exports.M26Age = M26Age;

@@ -5,7 +5,7 @@
 export class M26Constants {
 
   // class variables
-  static VERSION          : string = '0.3.0';
+  static VERSION          : string = '0.3.2';
   static UOM_MILES        : string = 'm';
   static UOM_KILOMETERS   : string = 'k';
   static UOM_YARDS        : string = 'y';
